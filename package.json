@@ -23,7 +23,7 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "description": "Coding Blog about learning ;)",
   "main": "index.js",
   "devDependencies": {},
   "repository": {
@@ -42,5 +42,5 @@
   "bugs": {
     "url": "https://github.com/no-trbl-2-u/CodeStumble/issues"
   },
-  "homepage": "https://github.com/no-trbl-2-u/CodeStumble#readme"
+  "homepage": "http://codestumble.com/"
 }

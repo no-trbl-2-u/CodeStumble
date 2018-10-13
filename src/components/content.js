@@ -7,8 +7,6 @@ class Content extends Component {
         <br /><br /> <br /> <br />
         <h1>This is is currently under construction ;)</h1>
         <br /> <br />
-        <h3>Howdy, to all my Ritz Five buddies!</h3>
-
       </div>
     )
   }

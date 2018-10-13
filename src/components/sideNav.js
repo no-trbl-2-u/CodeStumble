@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import portImg from './me.jpg';
+import portImg from './2018-07-23-00-00-25.png';
 
 
 class SideNav extends Component {
@@ -18,10 +18,13 @@ class SideNavIMG extends Component {
   render () {
     return (
       <div className = "portImgBlock">
+      <a href="http://www.facebook.com/pn143">
         <img className = {["portfolioImg", "img-circle"].join(' ')}
           alt = "WebmasterIMG"
           src = {portImg}
-        />
+        /></a>
+
+
       </div>
     )
   }
@@ -30,11 +33,11 @@ class SideNavIMG extends Component {
 class SideNavLinks extends Component {
   render () {
     return (
-      <div className = "linkBox">
+      <div className="linkBox">
         <ul>
-          <li>Link One</li>
-          <li>Link Two</li>
-          <li>Link Three</li>
+          <li><a href="https://www.google.com/search?q=bogus">Link One</a></li>
+          <li><a href="https://www.google.com/search?q=bogus">Link Two</a></li>
+          <li><a href="https://www.google.com/search?q=bogus">Link Three</a></li>
         </ul>
       </div>
     )

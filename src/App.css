@@ -1,7 +1,11 @@
 .App {
   text-align: center;
-  background-color:orangered;
+  background-color:lightcoral;
   height:650px;
+}
+
+.content {
+  margin: auto;
 }
 
 .sideNavBlock {

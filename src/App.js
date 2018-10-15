@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import SideNav from './components/sideNav';
-import Content from './components/content';
+import SideNav from './components/sideNav/sideNav';
+import Content from './components/content/content';
 import './App.css';
 
 class App extends Component {

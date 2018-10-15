@@ -1,26 +1,5 @@
 .App {
   text-align: center;
-  background-color:lightcoral;
-  height:650px;
-}
-
-.content {
-  margin: auto;
-}
-
-.sideNavBlock {
-  color: white;
-
-  background-color:darkslategrey;
-  border-right: 4px solid black;
-
-  float:left;
-
-  width: 30%;
+  background-color:rgb(89, 140, 149);
   height: 100%;
-}
-
-.portfolioImg {
-  width: 60%;
-  height: 200px; 
 }

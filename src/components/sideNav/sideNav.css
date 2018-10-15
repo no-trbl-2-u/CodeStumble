@@ -1,0 +1,24 @@
+.sideNavBlock {
+  color: white;
+
+  background-color:darkslategrey;
+  border-right: 4px solid black;
+
+  float:left;
+
+  width: 30%;
+  height: 100%;
+}
+
+.portfolioImg {
+  width: 60%;
+  height: 200px; 
+}
+
+.linkBox ul a:link {
+  color:white;
+}
+
+.linkBox ul a:visited {
+  color:white;
+}

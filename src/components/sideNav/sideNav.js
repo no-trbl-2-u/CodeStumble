@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import portImg from './2018-07-23-00-00-25.png';
+import portImg from './images/Retro landscape.jpg';
+import './sideNav.css'
 
 
 class SideNav extends Component {
   render () {
     return (
       <div className = "sideNavBlock">
-        <h3> Code Stumble </h3> <br />
-        <SideNavIMG /> <br />
+        <h3> Code Stumble </h3> <br /> <br />
+        <SideNavIMG /> <br /> <br /> <br />
         <SideNavLinks />
       </div>
     )

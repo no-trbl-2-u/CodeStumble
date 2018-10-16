@@ -1,0 +1,11 @@
+#mdArticle {
+  overflow: hidden;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  border-top: 4px solid black;
+}
+
+#mdArticle h1 {
+  text-align: center;
+}

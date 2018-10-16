@@ -1,11 +1,12 @@
 .sideNavBlock {
   color: white;
-
   background-color:darkslategrey;
+
   border-right: 4px solid black;
 
-  float:left;
+  text-align: center;
 
+  float:left;
   width: 30%;
   height: 100%;
 }

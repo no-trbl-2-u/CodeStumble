@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "express": "^4.16.4",
+    "markdown-to-jsx": "^6.7.4",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.4"
@@ -25,7 +26,9 @@
   ],
   "description": "Coding Blog about learning ;)",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "raw-loader": "^0.5.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/no-trbl-2-u/CodeStumble.git"

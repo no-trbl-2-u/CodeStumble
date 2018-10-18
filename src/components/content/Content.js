@@ -6,7 +6,12 @@ import Article from './Article/Article.js'
 class Content extends Component {
   render () {
     return (
-      <div className = "content">
+      <div className = {[
+        "content",
+        "col-8"
+        ].join(' ')}
+        >
+
         <br />
         <h1 id="construction"><i>This is is currently under construction</i> </h1>
         <br />

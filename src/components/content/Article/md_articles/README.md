@@ -11,10 +11,11 @@ path from an idea, the learning, the trying, the failing, the fixing, and the in
 
 ## Start Here:
 #### For those of you who are looking to contribute to the actual build of the site:
-```
+```sh
 $ mkdir CodeStumble && cd CodeStumble
 $ git clone https://github.com/no-trbl-2-u/CodeStumble.git
 $ npm install
+
 ```
 
 #### For those of you who are looking to contribute with an article:

@@ -1,4 +1,18 @@
 .App {
   background-color:rgb(89, 140, 149);
   height: 100%;
+  margin:0px;
+  padding:0px;
+}
+
+
+/*                        Media Queries                            */
+
+@media screen and (max-width: 400px) {
+  .sideNavBlock {
+    visibility: hidden;
+    width: 0%;
+    margin: 0px;
+    padding: 0px;
+  }
 }

@@ -6,7 +6,7 @@ import './sideNav.css'
 class SideNav extends Component {
   render () {
     return (
-      <div className = "sideNavBlock col-4">
+      <div className = "sideNavBlock col-sm-4 col-md-3 col- col-lg-2">
         <h3> Code Stumble </h3> <br /> <br />
         <SideNavIMG /> <br /> <br /> <br />
         <SideNavLinks />

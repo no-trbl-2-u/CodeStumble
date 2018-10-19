@@ -8,11 +8,15 @@
 
 /*                        Media Queries                            */
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 475px) {
   .sideNavBlock {
     visibility: hidden;
     width: 0%;
     margin: 0px;
     padding: 0px;
+  }
+
+  .float {
+    visibility: visible;
   }
 }

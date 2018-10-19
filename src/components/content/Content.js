@@ -11,6 +11,7 @@ class Content extends Component {
         <h1 id="construction"><i>This is is currently under construction</i> </h1>
         <br />
         <Article name="Defined in instantiation" />
+
       </div>
     )
   }

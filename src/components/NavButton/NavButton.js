@@ -21,9 +21,9 @@ class NavButton extends Component{
           <i className="fa fa-google-plus my-float"></i>
           </a></li>
 
-          <li><a href="#">
+          <li><Link to="/">
           <i className="fa fa-twitter my-float"></i>
-          </a></li>
+          </Link></li>
         </ul>
 
 

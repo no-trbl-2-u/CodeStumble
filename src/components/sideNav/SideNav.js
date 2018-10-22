@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from '@reach/router'; 
 import portImg from './images/Retro landscape.jpg';
 import './sideNav.css'
 
@@ -12,20 +13,20 @@ class SideNav extends Component {
         <SideNavLinks />
       </div>
     )
-  }
+  } 
 }
 
 class SideNavIMG extends Component {
   render () {
     return (
       <div className = "portImgBlock">
-      <a href="http://www.facebook.com/pn143">
-        <img className = "portfolioImg img-circle"
-          alt = "WebmasterIMG"
-          src = {portImg}
-        /></a>
-
-
+        <Link to="/">
+          <img 
+            className = "portfolioImg img-circle"
+            alt = "WebmasterIMG"
+            src = {portImg}
+          />
+        </Link>
       </div>
     )
   }
@@ -38,7 +39,7 @@ class SideNavLinks extends Component {
         <ul>
           <li><a href="https://www.google.com/search?q=bogus">Link One</a></li>
           <li><a href="https://www.google.com/search?q=bogus">Link Two</a></li>
-          <li><a href="https://www.google.com/search?q=bogus">Link Three</a></li>
+          <li><Link to="/"> Home Link </Link></li>
         </ul>
       </div>
     )

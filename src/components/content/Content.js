@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import { Router, Link } from '@reach/router';
+
 import './content.css'
-import Article from './Article/Article.js'
+import Article from './Article/Article.js';
+import About from './About/About.js'
 
 
 class Content extends Component {
@@ -10,7 +13,14 @@ class Content extends Component {
         <br />
         <h1 id="construction"><i>This is is currently under construction</i> </h1>
         <br />
-        <Article name="Defined in instantiation" />
+        <hr />
+
+        <Router>
+          <About path='/about' />
+          <Article path='/article' />
+        </Router>
+        
+        {/* <Article name="Defined in instantiation" /> */}
 
       </div>
     )

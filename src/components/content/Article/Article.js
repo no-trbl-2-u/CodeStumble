@@ -3,7 +3,7 @@ import Markdown from 'markdown-to-jsx';
 import './article.css';
 
 // Specific Article to load
-import test from './md_articles/README.md';
+import readMe from './md_articles/README.md';
 
 class Article extends Component {
   constructor (props) {
@@ -16,7 +16,7 @@ class Article extends Component {
     return (
         <div id="mdArticle">
           <Markdown>
-            {test}
+            {readMe}
           </Markdown>
         </div>
     )

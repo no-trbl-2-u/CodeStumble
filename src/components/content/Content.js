@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Router, Link } from '@reach/router';
+import { Router } from '@reach/router';
 
 import './content.css'
 import Article from './Article/Article.js';
@@ -15,13 +15,12 @@ class Content extends Component {
         <br />
         <hr />
 
+        {/* Here is the site's routing setup */}
         <Router>
           <About path='/about' />
           <Article path='/article' />
+          
         </Router>
-        
-        {/* <Article name="Defined in instantiation" /> */}
-
       </div>
     )
   }

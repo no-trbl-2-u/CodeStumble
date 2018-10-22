@@ -37,9 +37,9 @@ class SideNavLinks extends Component {
     return (
       <div className="linkBox">
         <ul>
-          <li><a href="https://www.google.com/search?q=bogus">Link One</a></li>
-          <li><a href="https://www.google.com/search?q=bogus">Link Two</a></li>
-          <li><Link to="/"> Home Link </Link></li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="about">About</Link></li>
+          <li><Link to="article">Article Index</Link></li>
         </ul>
       </div>
     )

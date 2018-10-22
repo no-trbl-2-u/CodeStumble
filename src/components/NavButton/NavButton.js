@@ -14,15 +14,15 @@ class NavButton extends Component{
         {/* List of Link icons */}
         <ul id="navButtonMenu">
           <li><Link to="article">
-          <i className="fa fa-facebook my-float"></i>
+          <i className="fa fa-list-ul my-float"></i>
           </Link></li>
 
-          <li><a href="#">
-          <i className="fa fa-google-plus my-float"></i>
-          </a></li>
+          <li><Link to="about">
+          <i className="fa fa-user my-float"></i>
+          </Link></li>
 
           <li><Link to="/">
-          <i className="fa fa-twitter my-float"></i>
+          <i className="fa fa-home my-float"></i>
           </Link></li>
         </ul>
 

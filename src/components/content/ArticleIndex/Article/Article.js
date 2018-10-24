@@ -4,19 +4,26 @@ import './article.css';
 
 // Specific Article to load
 import readMe from './md_articles/README.md';
+import example01 from './md_articles/example01.md';
+
+const articles = [
+  readMe,
+  example01
+]
+
 
 class Article extends Component {
   constructor (props) {
     super(props);
     this.state = {
-      name : "Article-Name",
+      articles,
     }
   }
   render () {
     return (
         <div id="mdArticle">
           <Markdown>
-            {readMe}
+            {this.state.articles[this.props.articleId]}
           </Markdown>
         </div>
     )

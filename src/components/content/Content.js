@@ -24,9 +24,7 @@ class Content extends Component {
           <Home path='/'/>
           <About path='/about' />
           <ArticleIndex path='/article' />
-          <Article 
-            path='/article/:articleId'
-          />
+          <Article path='/article/:articleId'/>
         </Router>
       </div>
     )

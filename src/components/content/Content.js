@@ -26,6 +26,8 @@ class Content extends Component {
           <ArticleIndex path='/article' />
           <Article path='/article/:articleId'/>
         </Router>
+
+        <p>{articleId}</p>
       </div>
     )
   }

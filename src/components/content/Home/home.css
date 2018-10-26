@@ -1,0 +1,19 @@
+#welcome_banner {
+  text-align: center;
+  border: 2px solid #add8e6;
+  border-radius: 25px;
+
+  animation: fadeIn 8s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    color: #ffffff
+  }
+  100% {
+    opacity: 3;
+    color:#000000
+  }
+
+}

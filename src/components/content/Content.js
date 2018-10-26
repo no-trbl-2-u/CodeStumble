@@ -7,7 +7,7 @@ class Content extends Component {
     return (
       <div className = "content col-sm-8 col-md-9 col-lg-10">
         <br />
-        <h2 id="construction"><i>This is is currently under construction</i> </h2>
+        <h2 id="construction"><i>This site is currently under construction</i> </h2>
         <hr />
 
         {/* Render all children Components! */}

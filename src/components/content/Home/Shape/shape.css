@@ -12,13 +12,13 @@
 .peak1 {
   border-left: 200px solid transparent;
   border-right: 200px solid transparent;
-  border-bottom: 200px solid SteelBlue;
+  border-bottom: 200px solid black;
 }
 
 .peak2 {
   border-left: 150px solid transparent;
   border-right: 175px solid transparent;
-  border-bottom: 150px solid SteelBlue;
+  border-bottom: 150px solid rgb(0, 0, 0);
   margin-left: -200px;
   margin-top: 50px;
 }
@@ -26,14 +26,14 @@
 .peak3 {
   border-left: 200px solid transparent;
   border-right: 200px solid transparent;
-  border-bottom: 200px solid SteelBlue;
+  border-bottom: 200px solid black;
   margin-left: -250px;
 }
 
 .sun {
   animation: rise 20s ease-in-out 2s infinite Alternate both;
   -webkit-animation: rise 10s ease-in-out 1s infinite Alternate both;
-  background: gold;
+  background: #FB5063;
   border-radius: 50%;
   height: 100px;
   margin: 0 auto;
@@ -49,7 +49,7 @@
 }
 .clouds-wrapper .li {
   position: absolute;
-  background: Gainsboro;
+  background: rgb(231, 93, 213);
 }
 .clouds-wrapper .li:nth-child(1) {
   border-radius: 30px;
@@ -174,7 +174,7 @@
     background: goldenrod;
   }
   55% {
-    background: golden;
+    background: orangered;
   }
   100% {
     transform: translateY(-350px);

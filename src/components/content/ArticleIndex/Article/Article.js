@@ -5,7 +5,6 @@ import './article.css';
 // Import all the articles
 import articles from './md_articles/index'
 
-// SINGLE SOURCE OF TRUTH... RULE BROKEN HERE!
 class Article extends Component {
   constructor (props) {
     super(props);

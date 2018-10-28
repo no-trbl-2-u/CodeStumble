@@ -16,35 +16,31 @@ class SideNav extends Component {
   } 
 }
 
-class SideNavIMG extends Component {
-  render () {
-    return (
-      <div className = "portImgBlock">
-        <Link to="/">
-          <img 
-            className = "portfolioImg img-circle"
-            alt = "WebmasterIMG"
-            src = {portImg}
-          />
-        </Link>
-      </div>
-    )
-  }
-}
+// Porfolio image (retro sunset)
+const SideNavIMG = () => (
+  <div className = "portImgBlock">
+    <Link to="/">
+      <img 
+        className = "portfolioImg img-circle"
+        alt = "WebmasterIMG"
+        src = {portImg}
+      />
+    </Link>
+  </div>  
+)
 
-class SideNavLinks extends Component {
-  render () {
-    return (
-      <div className="linkBox">
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="about">About</Link></li>
-          <li><Link to="article">Article Index</Link></li>
-        </ul>
-      </div>
-    )
-  }
-}
-
+// Simple functional component to wrap all the links
+// TODO -> Spruce up links:
+//      -> Find icons from fa for decoration
+//      -> <icon> <text/link> {<icon>}
+const SideNavLinks = () => (
+  <div className="linkBox">
+    <ul>
+      <li><Link to="/">Home</Link></li><br />
+      <li><Link to="about">About</Link></li><br />
+      <li><Link to="article">Article Index</Link></li><br />
+    </ul>
+  </div>
+)
 
 export default SideNav;

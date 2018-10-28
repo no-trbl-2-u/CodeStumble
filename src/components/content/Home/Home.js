@@ -8,6 +8,7 @@ class Home extends Component {
     return (
       <div>
         <h1 id="welcome_banner">Welcome to Code Stumble</h1>
+        <h3 align="center"> If you're not lost, you're not exploring! </h3>
         <Shape />
       </div>
     )

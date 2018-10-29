@@ -1,9 +1,9 @@
 import example01 from './example01.md';
-import readMe from './README.md';
+import intro from './intro.md';
 
 const articles = {
   example01,
-  readMe
+  intro
 }
 
 export default articles;

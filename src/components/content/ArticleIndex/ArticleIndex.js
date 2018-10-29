@@ -12,7 +12,7 @@ const ArticleIndex = () => (
       <h2>This is the Article Index!!</h2>
       <ul className="articleLinks">
         <li>
-          <Link to="readMe">Our first Article!</Link>
+          <Link to="intro">Our first Article!</Link>
         </li>
         <li>
           <Link to="example01">Our Second Article!</Link>

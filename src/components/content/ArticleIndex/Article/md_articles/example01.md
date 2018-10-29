@@ -1,9 +1,6 @@
-# This is another, seperate article
+# This is another, separate article
 
-It will be used as :
->A testing platform <br> 
->To make sure that <br>
->all this stuff works right
+## Here is a test to see if JS will highlight
 
 ```javascript
 const test = (arr) => {
@@ -12,7 +9,16 @@ const test = (arr) => {
   const allHlv = tmp.map((ea) => ea / 2)
   return [...allDbl, ...allHlv]
 }
+```
 
+## Here is a test to see if python will highlight
+
+```python
+def gt2(n):
+  if n > 2:
+    print("Greater than Two")
+  else:
+    print("Less Than Two")
 ```
 
 **This concludes my .md test**

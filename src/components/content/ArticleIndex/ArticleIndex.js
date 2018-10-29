@@ -2,6 +2,9 @@
 import React from 'react'
 import { Link } from '@reach/router'
 
+// Import Articles
+import './Article/md_articles/'
+
 // Import stylesheet
 import './articleIndex.css'
 

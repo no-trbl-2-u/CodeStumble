@@ -36,9 +36,18 @@ const SideNavIMG = () => (
 const SideNavLinks = () => (
   <div className="linkBox">
     <ul>
-      <li><Link to="/">Home</Link></li><br />
-      <li><Link to="about">About</Link></li><br />
-      <li><Link to="article">Article Index</Link></li><br />
+      <li>
+        <i className="fa fa-home my-float"></i>
+        <Link to="/"> Home</Link>
+      </li><br />
+      <li>
+        <i className="fa fa-user my-float"></i>
+        <Link to="about"> About</Link>
+      </li><br />
+      <li>
+        <i className="fa fa-list-ul my-float"></i>
+        <Link to="article"> Article Index</Link>
+      </li><br />
     </ul>
   </div>
 )

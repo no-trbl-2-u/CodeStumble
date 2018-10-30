@@ -11,11 +11,25 @@ import About from './components/content/About/About.js'
 import Article from './components/content/ArticleIndex/Article/Article'
 import Home from './components/content/Home/Home'
 
+import articles from './components/content/ArticleIndex/Article/md_articles/index'
+
 // Import the App's css
 import './App.css';
 
 class App extends Component {
+  constructor () {
+    super();
+    this.state = {
+      articles,
+    }
+  }
+
+  componentDidMount() {
+  }
+
   render() {
+    const {articles} = this.state
+
     return (
       <div className="App container-fluid">
         <SideNav/>
@@ -26,8 +40,14 @@ class App extends Component {
           <Router>
             <Home path='/'/>
             <About path='/about' />
-            <ArticleIndex path='/article' />
-            <Article path='/article/:articleId'/>
+            <ArticleIndex 
+              path='/article'
+              articles={articles} 
+            />
+            <Article
+              path='/article/:articleId'
+              articles={articles}
+            />
           </Router>
         </Content> 
 

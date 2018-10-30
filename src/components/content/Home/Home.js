@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './home.css';
 
-import Shape from './Shape/Shape'
+// import Shape from './Shape/Shape'
 
 class Home extends Component {
   render () {

@@ -23,6 +23,7 @@ class Article extends Component {
     // Include the object containing every MD file in the state
     this.state = {
       articles,
+      articleId: this.props.articleId
     }
 
     this.highlightCode = this.highlightCode.bind(this);
@@ -40,12 +41,13 @@ class Article extends Component {
   }
 
   render () {
+    const {articles, articleId } = this.state;
     return (
         <div id="mdArticle">
         {/* Markdown converts the MD file to readable HTML */}
           <Markdown>
             {/* Render an article based on the articleId from the "<Link to=...>" */}
-            {this.state.articles[this.props.articleId]}
+            {articles[articleId].md}
           </Markdown>
         </div>
     )

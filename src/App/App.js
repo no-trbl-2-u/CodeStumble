@@ -32,7 +32,6 @@ class App extends Component {
     return (
       <div className="App container-fluid">
         <SideNav/>
-
         {/* By splitting Content, the Router renders
                 the child component within Content */}
         <Content>

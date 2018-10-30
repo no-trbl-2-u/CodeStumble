@@ -12,6 +12,6 @@ it(`renders without crashing`, () => {
 // Take a snapshot and compare it
 it('renders a snapshot', () => {
   const tree = renderer.create(<App/>).toJSON();
+  // Compare tree to old tree
   expect(tree).toMatchSnapshot();
-  tree.children.map(ea => console.log(ea.children))
 });

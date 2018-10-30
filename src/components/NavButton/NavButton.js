@@ -6,12 +6,9 @@ class NavButton extends Component{
   render () {
     return(
       <div>
-        {/* Floating button
-              TODO -> Fix href or eliminate a tag 
-        */}
-        <a href="#" className="float" id="menu-share">
+        <span className="float" id="menu-share">
         <i className="fa fa-diamond my-float" aria-hidden="true"></i>
-        </a>
+        </span>
 
         {/* List of Link icons */}
         <ul id="navButtonMenu">

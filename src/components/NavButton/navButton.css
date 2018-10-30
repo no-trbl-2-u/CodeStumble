@@ -75,11 +75,11 @@
 	margin-top:18px;
 }
 
-a#menu-share + ul{
+span#menu-share + ul{
   visibility: hidden;
 }
 
-a#menu-share:hover + ul{
+span#menu-share:hover + ul{
   visibility: visible;
   animation: scale-in 0.5s;
 }

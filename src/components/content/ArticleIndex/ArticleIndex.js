@@ -9,6 +9,7 @@ class ArticleIndex extends Component{
     super(props);
     this.state = {
       articles: Object.values(this.props.articles)
+      // or -> : Object.keys(this.props.articles).map(i => this.props.articles[i])
     }
   }
 

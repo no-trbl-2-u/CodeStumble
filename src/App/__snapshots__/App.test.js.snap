@@ -1,0 +1,179 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a snapshot 1`] = `
+<div
+  className="App container-fluid"
+>
+  <div
+    className="sideNavBlock col-sm-4 col-md-3 col- col-lg-2"
+  >
+    <h3>
+       Code Stumble 
+    </h3>
+     
+    <br />
+     
+    <br />
+    <div
+      className="portImgBlock"
+    >
+      <a
+        aria-current="page"
+        href="/"
+        onClick={[Function]}
+      >
+        <img
+          alt="WebmasterIMG"
+          className="portfolioImg img-circle"
+          src="Retro landscape.jpg"
+        />
+      </a>
+    </div>
+     
+    <br />
+     
+    <br />
+     
+    <br />
+    <div
+      className="linkBox"
+    >
+      <ul>
+        <li>
+          <i
+            className="fa fa-home my-float"
+          />
+          <a
+            aria-current="page"
+            href="/"
+            onClick={[Function]}
+          >
+             Home
+          </a>
+        </li>
+        <br />
+        <li>
+          <i
+            className="fa fa-user my-float"
+          />
+          <a
+            href="/about"
+            onClick={[Function]}
+          >
+             About
+          </a>
+        </li>
+        <br />
+        <li>
+          <i
+            className="fa fa-list-ul my-float"
+          />
+          <a
+            href="/article"
+            onClick={[Function]}
+          >
+             Article Index
+          </a>
+        </li>
+        <br />
+      </ul>
+    </div>
+  </div>
+  <div
+    className="content col-sm-8 col-md-9 col-lg-10"
+  >
+    <br />
+    <h2
+      id="construction"
+    >
+      <i>
+        This site is currently under construction
+      </i>
+       
+    </h2>
+    <hr />
+    <div
+      role="group"
+      style={
+        Object {
+          "outline": "none",
+        }
+      }
+      tabIndex="-1"
+    >
+      <div>
+        <h1
+          id="welcome_banner"
+        >
+          Welcome to Code Stumble
+        </h1>
+        <h3
+          align="center"
+        >
+           If you're not lost, you're not exploring! 
+        </h3>
+      </div>
+    </div>
+  </div>
+  <div>
+    <span
+      className="float"
+      id="menu-share"
+    >
+      <i
+        aria-hidden="true"
+        className="fa fa-diamond my-float"
+      />
+    </span>
+    <ul
+      id="navButtonMenu"
+    >
+      <li>
+        <a
+          href="/article"
+          onClick={[Function]}
+        >
+          <i
+            className="fa fa-list-ul my-float"
+          />
+        </a>
+      </li>
+      <li>
+        <a
+          href="/about"
+          onClick={[Function]}
+        >
+          <i
+            className="fa fa-user my-float"
+          />
+        </a>
+      </li>
+      <li>
+        <a
+          aria-current="page"
+          href="/"
+          onClick={[Function]}
+        >
+          <i
+            className="fa fa-home my-float"
+          />
+        </a>
+      </li>
+    </ul>
+    <div
+      className="label-container"
+    >
+      <div
+        className="label-text"
+      >
+         Navigate 
+      </div>
+      <i
+        className="fa fa-play label-arrow"
+      >
+         
+      </i>
+    </div>
+  </div>
+</div>
+`;

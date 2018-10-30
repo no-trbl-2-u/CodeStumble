@@ -1,8 +1,7 @@
-// Import libraries
+// App.js
 import React, { Component } from 'react';
 import { Router } from '@reach/router'
 
-// Import all the other components that are direct children
 import SideNav from '../components/sideNav/SideNav';
 import NavButton from '../components/NavButton/NavButton'
 import Content from '../components/content/Content';

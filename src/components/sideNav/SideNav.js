@@ -30,9 +30,6 @@ const SideNavIMG = () => (
 )
 
 // Simple functional component to wrap all the links
-// TODO -> Spruce up links:
-//      -> Find icons from fa for decoration
-//      -> <icon> <text/link> {<icon>}
 const SideNavLinks = () => (
   <div className="linkBox">
     <ul>

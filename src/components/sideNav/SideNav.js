@@ -3,11 +3,10 @@ import { Link } from '@reach/router';
 import portImg from './images/Retro landscape.jpg';
 import './sideNav.css'
 
-
 class SideNav extends Component {
   render () {
     return (
-      <div className = "sideNavBlock col-sm-4 col-md-3 col- col-lg-2">
+      <div className = "sideNavBlock">
         <h3> Code Stumble </h3> <br /> <br />
         <SideNavIMG /> <br /> <br /> <br />
         <SideNavLinks />
@@ -15,6 +14,7 @@ class SideNav extends Component {
     )
   } 
 }
+
 
 // Porfolio image (retro sunset)
 const SideNavIMG = () => (
@@ -29,24 +29,37 @@ const SideNavIMG = () => (
   </div>  
 )
 
-// Simple functional component to wrap all the links
-const SideNavLinks = () => (
-  <div className="linkBox">
-    <ul>
-      <li>
-        <i className="fa fa-home my-float"></i>
-        <Link to="/"> Home</Link>
-      </li><br />
-      <li>
-        <i className="fa fa-user my-float"></i>
-        <Link to="about"> About</Link>
-      </li><br />
-      <li>
-        <i className="fa fa-list-ul my-float"></i>
-        <Link to="article"> Article Index</Link>
-      </li><br />
-    </ul>
-  </div>
-)
+
+class SideNavLinks extends Component {
+  render() {
+    return (
+      <div className="linkBox">
+        <ul>
+
+          <Link to="/">
+            <li>
+              <i className="fa fa-home my-float"></i>
+              <span> Home</span>
+            </li>
+          </Link> <br />
+          
+          <Link to="about">
+            <li>
+              <i className="fa fa-user my-float"></i>
+              <span> About</span>
+            </li>
+          </Link> <br />
+
+          <Link to="article">
+            <li>
+              <i className="fa fa-list-ul my-float"></i>
+              <span> Article Index</span>
+            </li> <br />
+          </Link>
+        </ul>
+      </div>
+    )
+  }
+}
 
 export default SideNav;

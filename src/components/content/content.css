@@ -1,11 +1,27 @@
-.content {
+.content-container{
   height: 100%;
   background-color: white;
   margin: auto;
   overflow: scroll; 
 }
 
-#construction {
+.App-header {
   text-align: center;
-  /* background-color: lightblue; */
+  background-color: #2F4F4F;
+  color: azure;
+
+  margin:0px;
+  padding: 20px;
+
+  border-bottom: 3px solid black;
+  visibility: hidden;
+}
+
+.content-container header a:link {
+  color: white;
+  text-decoration: none;
+}
+
+.content-container header a:visited {
+  color: white;
 }

@@ -13,6 +13,7 @@
 .portfolioImg {
   /* width: 100%; */
   height: 200px;
+  margin: 5px;
 }
 
 .linkBox {
@@ -23,6 +24,11 @@
 .linkBox ul {
   list-style-type: none;
 }
+/* 
+.linkBox li span {
+  width: 100%;
+  background-color:black;
+} */
 
 .linkBox ul li:hover{
   border: 2px solid white;

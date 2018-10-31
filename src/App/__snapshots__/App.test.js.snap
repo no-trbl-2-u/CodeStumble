@@ -5,7 +5,7 @@ exports[`renders a snapshot 1`] = `
   className="App container-fluid"
 >
   <div
-    className="sideNavBlock col-sm-4 col-md-3 col- col-lg-2"
+    className="sideNavBlock"
   >
     <h3>
        Code Stumble 
@@ -39,59 +39,67 @@ exports[`renders a snapshot 1`] = `
       className="linkBox"
     >
       <ul>
-        <li>
-          <i
-            className="fa fa-home my-float"
-          />
-          <a
-            aria-current="page"
-            href="/"
-            onClick={[Function]}
-          >
-             Home
-          </a>
-        </li>
+        <a
+          aria-current="page"
+          href="/"
+          onClick={[Function]}
+        >
+          <li>
+            <i
+              className="fa fa-home my-float"
+            />
+            <span>
+               Home
+            </span>
+          </li>
+        </a>
+         
         <br />
-        <li>
-          <i
-            className="fa fa-user my-float"
-          />
-          <a
-            href="/about"
-            onClick={[Function]}
-          >
-             About
-          </a>
-        </li>
+        <a
+          href="/about"
+          onClick={[Function]}
+        >
+          <li>
+            <i
+              className="fa fa-user my-float"
+            />
+            <span>
+               About
+            </span>
+          </li>
+        </a>
+         
         <br />
-        <li>
-          <i
-            className="fa fa-list-ul my-float"
-          />
-          <a
-            href="/article"
-            onClick={[Function]}
-          >
-             Article Index
-          </a>
-        </li>
-        <br />
+        <a
+          href="/article"
+          onClick={[Function]}
+        >
+          <li>
+            <i
+              className="fa fa-list-ul my-float"
+            />
+            <span>
+               Article Index
+            </span>
+          </li>
+           
+          <br />
+        </a>
       </ul>
     </div>
   </div>
   <div
-    className="content col-sm-8 col-md-9 col-lg-10"
+    className="content-container"
   >
-    <br />
-    <h2
-      id="construction"
-    >
-      <i>
-        This site is currently under construction
-      </i>
-       
-    </h2>
-    <hr />
+    <header>
+      <h2
+        className="App-header"
+      >
+        <i>
+          Code Stumble
+        </i>
+      </h2>
+    </header>
     <div
       role="group"
       style={
@@ -101,7 +109,9 @@ exports[`renders a snapshot 1`] = `
       }
       tabIndex="-1"
     >
-      <div>
+      <div
+        className="Home-container"
+      >
         <h1
           id="welcome_banner"
         >

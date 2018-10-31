@@ -15,7 +15,7 @@ class ArticleIndex extends Component{
 
   render() {
     return (
-      <div>
+      <div className="ArticleIndex-container">
         <h2>All The Articles</h2>
         <ul className='articleLinks'>
           {this.state.articles.map((ea, index) => {

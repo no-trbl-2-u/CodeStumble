@@ -13,6 +13,13 @@ class NavButton extends Component{
         {/* List of Link icons */}
         <ul id="navButtonMenu">
 
+          {/* Home Button - House */}
+          <li>
+            <Link to="/">
+            <i className="fa fa-home my-float"></i>
+            </Link>
+          </li>
+
           {/* Article Button - List */}
           <li>
             <Link to="articles">
@@ -26,21 +33,7 @@ class NavButton extends Component{
             <i className="fa fa-user my-float"></i>
             </Link>
           </li>
-
-          {/* Home Button - House */}
-          <li>
-            <Link to="/">
-            <i className="fa fa-home my-float"></i>
-            </Link>
-          </li>
         </ul>
-
-
-        {/* Floating label */}
-        <div className="label-container">
-          <div className="label-text"> Navigate </div>
-          <i className="fa fa-play label-arrow"> </i>
-        </div>
       </div>
     )
   }

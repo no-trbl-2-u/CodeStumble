@@ -12,7 +12,7 @@ class Content extends Component {
       // TODO -> Fix bootstrap classes for Content & NavBar
       <div className = "content-container">
 
-        {/* TODO -> Replace w/ Header component */}
+        {/* TODO -> Make a Header COMPONENT! */}
         <header>
           <Link to="/">
             <h2 className="App-header">

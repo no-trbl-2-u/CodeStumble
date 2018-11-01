@@ -6,19 +6,23 @@
 
   float: left;
   height: 100%;
+  overflow: auto;
 }
 .sideNavBlock h3 {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .portfolioImg {
   height: 200px;
   margin: 5px;
+  margin-top: 45px;
 }
 
 .linkBox {
   font-size:24px;
   margin-left: 5px;
+  margin-top: 45px;
 }
 
 .linkBox ul {
@@ -29,11 +33,11 @@
   text-align: center;
   margin: 4px;
   list-style-type: none;
+  margin-bottom: 20px;
 }
 
 .linkBox ul li:hover{
   border: 2px solid white;
-  margin: 2px;
   border-radius: 20px;
 }
 

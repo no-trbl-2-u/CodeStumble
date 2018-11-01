@@ -7,8 +7,8 @@ class SideNav extends Component {
   render () {
     return (
       <div className = "sideNavBlock">
-        <h3> Code Stumble </h3> <br /> <br />
-        <SideNavIMG /> <br /> <br /> <br />
+        <h3> Code Stumble </h3>
+        <SideNavIMG />
         <SideNavLinks />
       </div>
     )
@@ -41,21 +41,21 @@ class SideNavLinks extends Component {
               <i className="fa fa-home my-float"></i>
               <span> Home</span>
             </li>
-          </Link> <br />
-          
-          <Link to="about">
-            <li>
-              <i className="fa fa-user my-float"></i>
-              <span> About</span>
-            </li>
-          </Link> <br />
+          </Link>
 
           <Link to="articles">
             <li>
               <i className="fa fa-list-ul my-float"></i>
               <span> Article Index</span>
-            </li> <br />
+            </li>
           </Link>
+          
+          <Link to="about">
+            <li>
+              <i className="fa fa-user my-float"></i>
+              <span> About Me</span>
+            </li>
+          </Link> 
         </ul>
       </div>
     )

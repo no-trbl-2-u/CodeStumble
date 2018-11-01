@@ -13,16 +13,13 @@ import 'highlight.js/styles/atom-one-dark-reasonable.css';
 
 import './article.css';
 
-// Import all the articles
-import articles from './md_articles/index'
-
 class Article extends Component {
   constructor (props) {
     super(props);
     
     // Include the object containing every MD file in the state
     this.state = {
-      articles,
+      articles: this.props.articles,
       articleId: this.props.articleId
     }
 

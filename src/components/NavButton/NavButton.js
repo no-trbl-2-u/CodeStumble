@@ -15,7 +15,7 @@ class NavButton extends Component{
 
           {/* Article Button - List */}
           <li>
-            <Link to="article">
+            <Link to="articles">
             <i className="fa fa-list-ul my-float"></i>
             </Link>
           </li>

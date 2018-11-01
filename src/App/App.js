@@ -7,10 +7,10 @@ import NavButton from '../components/NavButton/NavButton'
 import Content from '../components/content/Content';
 import ArticleIndex from '../components/content/ArticleIndex/ArticleIndex';
 import About from '../components/content/About/About.js'
-import Article from '../components/content/ArticleIndex/Article/Article'
+import Article from '../components/content/Article/Article'
 import Home from '../components/content/Home/Home'
 
-import articles from '../components/content/ArticleIndex/Article/md_articles/index'
+import articles from '../components/content/Article/md_articles/index'
 
 // Import the App's css
 import './App.css';
@@ -39,11 +39,11 @@ class App extends Component {
             <Home path='/'/>
             <About path='/about' />
             <ArticleIndex 
-              path='/article'
+              path='/articles'
               articles={articles} 
             />
             <Article
-              path='/article/:articleId'
+              path='/articles/:articleId'
               articles={articles}
             />
           </Router>

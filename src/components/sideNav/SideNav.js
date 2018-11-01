@@ -50,7 +50,7 @@ class SideNavLinks extends Component {
             </li>
           </Link> <br />
 
-          <Link to="article">
+          <Link to="articles">
             <li>
               <i className="fa fa-list-ul my-float"></i>
               <span> Article Index</span>

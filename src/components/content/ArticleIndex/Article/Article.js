@@ -43,7 +43,7 @@ class Article extends Component {
   render () {
     const {articles, articleId } = this.state;
     return (
-        <div id="mdArticle">
+        <div className="mdArticle">
         {/* Markdown converts the MD file to readable HTML */}
           <Markdown>
             {/* Render an article based on the articleId from the "<Link to=...>" */}

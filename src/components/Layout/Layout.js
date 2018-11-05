@@ -1,9 +1,9 @@
-// Import Libraries
 import React, { Component } from 'react';
 import { Link } from '@reach/router'
 
-// Import css file for content component
-import './content.css'
+import Header from './Header/Header'
+
+import './layout.css'
 
 class Layout extends Component {
 
@@ -11,15 +11,9 @@ class Layout extends Component {
     return (
       // TODO -> Fix bootstrap classes for Content & NavBar
       <div className = "content-container">
-
-        {/* TODO -> Make a Header COMPONENT! */}
-        <header>
-          <Link to="/">
-            <h2 className="App-header">
-              <i>Code Stumble</i> 
-            </h2>
-          </Link>
-        </header>
+        <Link to="/">
+          <Header />
+        </Link>
 
         {/* Render all children Components! */}
         {this.props.children}

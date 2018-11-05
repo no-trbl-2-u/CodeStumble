@@ -20,7 +20,7 @@ class ArticleIndex extends Component{
         <ul className='articleLinks'>
           {this.state.articles.map((ea, index) => {
             return(
-              <li key={index}><Link to={ea.path}>{ea.title}</Link></li>
+              <li className="articleLink" key={index}><Link to={ea.path}>{ea.title}</Link></li>
             )  
           })}
         </ul>

@@ -7,7 +7,7 @@ class SideNav extends Component {
   render () {
     return (
       <div className = "sideNavBlock">
-        <h3> Code Stumble </h3>
+        <h2> &lt; CS /&gt; </h2>
         <SideNavIMG />
         <SideNavLinks />
       </div>
@@ -46,7 +46,7 @@ class SideNavLinks extends Component {
           <Link to="articles">
             <li>
               <i className="fa fa-list-ul my-float"></i>
-              <span> Article Index</span>
+              <span> Learn </span>
             </li>
           </Link>
           

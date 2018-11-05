@@ -8,15 +8,18 @@
   height: 100%;
   overflow: auto;
 }
-.sideNavBlock h3 {
+
+.sideNavBlock h2 {
   text-align: center;
-  margin-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 55px;
+  border-bottom: 4px solid black;
 }
 
 .portfolioImg {
   height: 200px;
   margin: 5px;
-  margin-top: 45px;
+  /* margin-top: 45px; */
 }
 
 .linkBox {

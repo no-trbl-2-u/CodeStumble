@@ -1,0 +1,34 @@
+.App-header {
+  text-align: center;
+  background-color: #2F4F4F;
+  color: azure;
+
+  margin:0px;
+  padding: 20px;
+
+  border-bottom: 3px solid black;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.welcome_banner {
+  text-align: center;
+  /* border: 2px solid #add8e6;
+  border-radius: 25px; */
+  /* margin: 50px; */
+
+  animation: fadeIn 8s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    background-color: #2F4F4F;
+  }
+  100% {
+    opacity: 3;
+    color:#ffffff
+  }
+}

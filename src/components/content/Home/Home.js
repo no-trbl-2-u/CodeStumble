@@ -8,8 +8,6 @@ import hljs from 'highlight.js';
 import 'highlight.js/styles/atom-one-dark-reasonable.css';
 import home from './welcome.md'
 
-// import Shape from './Shape/Shape'
-
 class Home extends Component {
 
   componentDidMount() {
@@ -20,13 +18,13 @@ class Home extends Component {
     const codeCollection = [...document.getElementsByTagName('code')]
     codeCollection.map(eaBlock => hljs.highlightBlock(eaBlock))
   }
+
   render () {
     return (
       <div className="Home-container">
         <h1 className="welcome_banner">Welcome to Code Stumble</h1>
         <h3 align="center"> If you're not lost, you're not exploring! </h3>
-        {/* <Shape /> */}
-
+        
         <Markdown>
           {home}
         </Markdown>

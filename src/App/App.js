@@ -2,15 +2,15 @@
 import React, { Component } from 'react';
 import { Router } from '@reach/router'
 
-import SideNav from '../components/sideNav/SideNav';
+import SideNav from '../components/SideNav/SideNav';
 import NavButton from '../components/NavButton/NavButton'
-import Content from '../components/content/Content';
-import ArticleIndex from '../components/content/ArticleIndex/ArticleIndex';
-import About from '../components/content/About/About.js'
-import Article from '../components/content/Article/Article'
-import Home from '../components/content/Home/Home'
+import Layout from '../components/Layout/Layout';
+import ArticleIndex from '../components/Layout/ArticleIndex/ArticleIndex';
+import About from '../components/Layout/About/About.js'
+import Article from '../components/Layout/Article/Article'
+import Home from '../components/Layout/Home/Home'
 
-import articles from '../components/content/Article/md_articles/index'
+import articles from '../components/Layout/Article/md_articles/index'
 
 // Import the App's css
 import './App.css';
@@ -32,9 +32,9 @@ class App extends Component {
     return (
       <div className="App container-fluid">
         <SideNav/>
-        {/* By splitting Content, the Router renders
-                the child component within Content */}
-        <Content>
+        {/* By splitting Layout, the Router renders
+                the child component within Layout */}
+        <Layout>
           <Router>
             <Home path='/'/>
             <About path='/about' />
@@ -47,7 +47,7 @@ class App extends Component {
               articles={articles}
             />
           </Router>
-        </Content> 
+        </Layout> 
 
         <NavButton />
       </div>

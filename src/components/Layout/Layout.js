@@ -5,7 +5,7 @@ import { Link } from '@reach/router'
 // Import css file for content component
 import './content.css'
 
-class Content extends Component {
+class Layout extends Component {
 
   render () {
     return (
@@ -28,4 +28,4 @@ class Content extends Component {
   }
 }
 
-export default Content;
+export default Layout;

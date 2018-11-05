@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Code Stumble
 ###### Someone:
 >*If you're not lost, you're not exploring*
@@ -19,3 +20,4 @@ $ npm install
 
 #### For those of you who are looking to contribute with an article:
 Feel free to message me on here, even if it's just an idea for an article!
+

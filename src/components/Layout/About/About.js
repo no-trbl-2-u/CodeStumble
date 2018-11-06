@@ -11,6 +11,7 @@ class About extends Component {
     return (
       <div className="About-container">
         <h1>This will be the About page</h1>
+        <h3> Here: => Like === !== what?!</h3>
       </div>
     )
   }

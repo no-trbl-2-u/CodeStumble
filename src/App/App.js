@@ -6,9 +6,10 @@ import SideNav from '../components/SideNav/SideNav';
 import NavButton from '../components/NavButton/NavButton'
 import Layout from '../components/Layout/Layout';
 import ArticleIndex from '../components/Layout/ArticleIndex/ArticleIndex';
-import About from '../components/Layout/About/About.js'
+import About from '../components/Layout/About/About'
 import Article from '../components/Layout/Article/Article'
 import Home from '../components/Layout/Home/Home'
+import Demos from '../components/Layout/Demos/Demos'
 
 import articles from '../components/Layout/Article/md_articles/index'
 
@@ -46,6 +47,7 @@ class App extends Component {
               path='/articles/:articleId'
               articles={articles}
             />
+            <Demos path='/explore' />
           </Router>
         </Layout> 
 

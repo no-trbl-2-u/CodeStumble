@@ -27,6 +27,12 @@ class NavButton extends Component{
             </Link>
           </li>
 
+          <li>
+            <Link to="explore">
+              <i className="fa fa-magic my-float"></i>
+            </Link>
+          </li>
+
           {/* About Button - Person */}
           <li>
             <Link to="about">

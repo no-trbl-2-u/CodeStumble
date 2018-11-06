@@ -49,6 +49,13 @@ class SideNavLinks extends Component {
               <span> Learn </span>
             </li>
           </Link>
+
+          <Link to="explore">
+            <li>
+              <i className="fa fa-magic my-float"></i>
+              <span> Explore </span>
+            </li>
+          </Link>
           
           <Link to="about">
             <li>

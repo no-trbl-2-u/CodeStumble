@@ -1,3 +1,45 @@
 .About-container {
-  margin: 15px;
+  margin: 5px;
+  border-radius: 25px;
+  height: 400px;
+  text-align: center;
+  word-wrap: break-word;
+
+  font-weight: bold;
+  color: black;
+}
+
+.AboutIMG {
+  width: 40%;
+  height: 220px;
+  margin-top: 30px;
+}
+
+.About-info-left {
+  float: left;
+  margin-top:50px;
+  width: 30%;
+  border-radius: 25px;
+  /* background-color:red; */
+}
+
+.About-info-right {
+  float: right;
+  margin-top: 50px;
+  width: 30%;
+  border-radius: 25px;
+  /* background-color:red; */
+}
+
+.About-links {
+  margin-top: 50px;
+  background-color: blue;
+  border-radius: 25px;
+  height: 82px;
+  color: white;
+}
+
+
+.About-container p {
+  font-size: 16px;
 }

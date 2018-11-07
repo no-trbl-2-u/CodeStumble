@@ -11,9 +11,12 @@
 
 .sideNavBlock h2 {
   text-align: center;
-  padding-top: 30px;
+  margin-top: 0px;
+  padding-top: 50px;
   padding-bottom: 45px;
   border-bottom: 4px solid black;
+  background-color: #282C34;
+  color: grey;
 }
 
 .portfolioImg {

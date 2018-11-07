@@ -25,7 +25,7 @@ class Article extends Component {
 
     this.highlightCode = this.highlightCode.bind(this);
   }
-
+  
   // On mount, highlight code
   componentDidMount() {
     this.highlightCode();

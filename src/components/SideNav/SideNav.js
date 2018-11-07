@@ -6,7 +6,7 @@ import './sideNav.css'
 class SideNav extends Component {
   render () {
     return (
-      <div className = "sideNavBlock">
+      <div className="sideNavBlock">
         <h2> &lt; CS /&gt; </h2>
         <SideNavIMG />
         <SideNavLinks />
@@ -18,12 +18,12 @@ class SideNav extends Component {
 
 // Porfolio image (retro sunset)
 const SideNavIMG = () => (
-  <div className = "portImgBlock">
+  <div className="portImgBlock">
     <Link to="/">
       <img 
-        className = "portfolioImg img-circle"
-        alt = "WebmasterIMG"
-        src = {portImg}
+        className="portfolioImg img-circle"
+        alt="SideNavIMG"
+        src={portImg}
       />
     </Link>
   </div>  

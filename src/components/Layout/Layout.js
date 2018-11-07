@@ -10,7 +10,7 @@ class Layout extends Component {
   render () {
     return (
       // TODO -> Fix bootstrap classes for Content & NavBar
-      <div className = "content-container">
+      <div className="content-container">
         <Link to="/">
           <Header />
         </Link>

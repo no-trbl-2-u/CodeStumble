@@ -8,6 +8,7 @@
 
 # production
 /build
+.eslintrc
 
 # misc
 .DS_Store
@@ -16,6 +17,7 @@
 .env.test.local
 .env.production.local
 
+# myDeploy
 deploy
 
 npm-debug.log*

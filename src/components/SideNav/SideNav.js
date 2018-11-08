@@ -38,28 +38,28 @@ class SideNavLinks extends Component {
 
           <Link to="/">
             <li>
-              <i className="fa fa-home my-float"></i>
+              <i className="fa fa-home"></i>
               <span> Home</span>
             </li>
           </Link>
 
           <Link to="articles">
             <li>
-              <i className="fa fa-list-ul my-float"></i>
+              <i className="fa fa-list-ul"></i>
               <span> Learn </span>
             </li>
           </Link>
 
           <Link to="explore">
             <li>
-              <i className="fa fa-magic my-float"></i>
+              <i className="fa fa-magic"></i>
               <span> Explore </span>
             </li>
           </Link>
           
           <Link to="about">
             <li>
-              <i className="fa fa-user my-float"></i>
+              <i className="fa fa-user"></i>
               <span> About Me</span>
             </li>
           </Link> 

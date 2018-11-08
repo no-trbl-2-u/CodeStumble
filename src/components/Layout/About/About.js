@@ -31,10 +31,19 @@ class About extends Component {
         </div>
 
         <div className="About-links">
-          <ul>
-            <li>Place One</li>
+          <ul className="go-left">
+            <li>
+              <a href="https://github.com/no-trbl-2-u">
+                  <i className="fa fa-github"></i>
+                  <span> Github</span>
+              </a>
+            </li>
+
             <li>Place Two</li>
+          </ul>
+          <ul className="go-right">
             <li>Place Three</li>
+            <li>Place Four</li>
           </ul>
         </div>
       

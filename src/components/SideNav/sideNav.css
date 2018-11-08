@@ -8,12 +8,12 @@
   height: 100%;
   overflow: auto;
 }
-
+ 
 .sideNavBlock h2 {
   text-align: center;
   margin-top: 0px;
-  padding-top: 50px;
-  padding-bottom: 45px;
+  padding-top: 35px;
+  padding-bottom: 34px;
   border-bottom: 4px solid black;
   background-color: #282C34;
   color: grey;
@@ -21,7 +21,7 @@
 
 .portfolioImg {
   height: 200px;
-  margin: 5px;
+  margin: 8px;
   /* margin-top: 45px; */
 }
 
@@ -39,7 +39,7 @@
   text-align: center;
   margin: 4px;
   list-style-type: none;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .linkBox ul li:hover{

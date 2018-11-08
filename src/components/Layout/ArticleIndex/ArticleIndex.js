@@ -16,7 +16,13 @@ class ArticleIndex extends Component{
   render() {
     return (
       <div className="ArticleIndex-container">
-        <h2>All The Articles</h2>
+
+        <section className="jumbotron text-center">
+          <div className="container">
+            <h1 className="jumbotron-heading">Articles</h1>
+          </div>
+        </section>
+
         <ul className='articleLinks'>
           {this.state.articles.map((ea, index) => {
             return(

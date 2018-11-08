@@ -30,8 +30,8 @@ class About extends Component {
           <p>Web-Developer</p>
         </div>
 
-        <div className="About-links">
-          <ul className="go-left">
+        <div className="About-links container">
+          <ul className="About-links-inner">
             <li>
               <a href="https://github.com/no-trbl-2-u">
                   <i className="fa fa-github"></i>
@@ -41,7 +41,7 @@ class About extends Component {
 
             <li>Place Two</li>
           </ul>
-          <ul className="go-right">
+          <ul className="About-links-inner">
             <li>Place Three</li>
             <li>Place Four</li>
           </ul>

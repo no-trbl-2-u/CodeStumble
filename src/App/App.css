@@ -37,4 +37,25 @@
   .App-header {
     visibility: visible;
   }
+
+  /* TODO */
+  /* Rules needed for small landscape views */
+  /* Specifically the Button Menu */
+  @media screen and (max-height: 350px) {
+    /* .sideNavBlock {
+      visibility: hidden;
+      width: 0%;
+      margin: 0px;
+      padding: 0px;
+    }
+  
+    .float {
+      visibility: visible;
+    }
+  
+    .App-header {
+      visibility: visible;
+    }
+  */
+  }
 }

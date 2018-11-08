@@ -1,0 +1,20 @@
+.card-box {
+  text-align: center;
+  background-color: darkslategray;
+  color: white;
+  border-radius: 25px;
+  margin: 8px;
+  margin-bottom: 16px;
+}
+
+.card-text {
+  margin: 4px;
+}
+
+.btn-group button{
+  margin: 10px;
+}
+
+.card-box img {
+  width: 100%;
+}

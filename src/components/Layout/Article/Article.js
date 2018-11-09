@@ -1,16 +1,6 @@
 import React, { Component } from 'react';
 import Markdown from 'markdown-to-jsx';
 
-
-// TODO -> create custom hljs index.js file to
-//      -> only load specific languages
-//      -> OR -> create another .js file and
-//            -> load them manually
-// Code Highlighting dependencies
-import hljs from 'highlight.js';
-// HLJS style
-import 'highlight.js/styles/atom-one-dark-reasonable.css';
-
 import './article.css';
 
 class Article extends Component {
@@ -22,19 +12,11 @@ class Article extends Component {
       articles: this.props.articles,
       articleId: this.props.articleId
     }
-
-    this.highlightCode = this.highlightCode.bind(this);
   }
   
   // On mount, highlight code
   componentDidMount() {
-    this.highlightCode();
-  }
-
-  // Method to highlight code
-  highlightCode() {
-    const codeCollection = [...document.getElementsByTagName('code')]
-    codeCollection.map(eaBlock => hljs.highlightBlock(eaBlock))
+    this.props.highlightCodeBlock();
   }
 
   render () {

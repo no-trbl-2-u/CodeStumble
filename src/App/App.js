@@ -2,6 +2,9 @@
 import React, { Component } from 'react';
 import { Router } from '@reach/router'
 
+import hljs from 'highlight.js'
+import 'highlight.js/styles/atom-one-dark-reasonable.css'
+
 import SideNav from '../components/SideNav/SideNav';
 import NavButton from '../components/NavButton/NavButton'
 import Layout from '../components/Layout/Layout';
@@ -24,7 +27,9 @@ class App extends Component {
     }
   }
 
-  componentDidMount() {
+  highlightCode() {
+    const codeCollection = [...document.getElementsByTagName('code')]
+    codeCollection.map(eaBlock => hljs.highlightBlock(eaBlock))
   }
 
   render() {
@@ -34,10 +39,13 @@ class App extends Component {
       <div className="App container-fluid">
         <SideNav/>
         {/* By splitting Layout, the Router renders
-                the child component within Layout */}
+                the child components within Layout */}
         <Layout>
           <Router>
-            <Home path='/'/>
+            <Home 
+              path='/'
+              highlightCodeBlock={this.highlightCode}
+            />
             <About path='/about' />
             <ArticleIndex 
               path='/articles'
@@ -46,6 +54,7 @@ class App extends Component {
             <Article
               path='/articles/:articleId'
               articles={articles}
+              highlightCodeBlock={this.highlightCode}
             />
             <Demos path='/explore' />
           </Router>

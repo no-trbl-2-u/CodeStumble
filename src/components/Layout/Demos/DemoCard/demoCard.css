@@ -11,6 +11,13 @@
   margin: 4px;
 }
 
+.card-title {
+  background-color:#282C34;
+  border-radius: 25px;
+  width: 80%;
+  margin: 10px 30px 10px 30px;
+}
+
 .btn-group button{
   margin: 10px;
 }

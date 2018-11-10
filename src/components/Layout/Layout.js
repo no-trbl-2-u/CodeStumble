@@ -6,7 +6,6 @@ import Header from './Header/Header'
 import './layout.css'
 
 class Layout extends Component {
-
   render () {
     return (
       <div className="content-container">

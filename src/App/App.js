@@ -13,6 +13,7 @@ import About from '../components/Layout/About/About'
 import Article from '../components/Layout/Article/Article'
 import Home from '../components/Layout/Home/Home'
 import Demos from '../components/Layout/Demos/Demos'
+import TimerPage from '../components/Layout/Demos/TimerPage/TimerPage'
 
 import articles from '../components/Layout/Article/md_articles/index'
 
@@ -46,17 +47,22 @@ class App extends Component {
               path='/'
               highlightCodeBlock={this.highlightCode}
             />
+
             <About path='/about' />
+
             <ArticleIndex 
               path='/articles'
               articles={articles} 
             />
+
             <Article
               path='/articles/:articleId'
               articles={articles}
               highlightCodeBlock={this.highlightCode}
             />
+
             <Demos path='/explore' />
+            <TimerPage path='/explore/timer' />
           </Router>
         </Layout> 
 

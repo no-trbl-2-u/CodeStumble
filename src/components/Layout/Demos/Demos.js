@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
 
-import DemoCard from './DemoCard/DemoCard'
+import DemoCard from './DemoCard/DemoCard';
+import demos from './demoInfo';
 
 import './demos.css'
 
 class Demos extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      demos
+    }
+  }
   render() {
     return (
       <div className="Demo-container">
@@ -20,9 +27,19 @@ class Demos extends Component {
       <div className="album py-5 bg-light">
         <div className="container-fluid">
           <div className="row">
-            <DemoCard />
-            <DemoCard />
-            <DemoCard />
+            {this.state.demos
+              .map((ea, index) =>{
+                const {demoName, path, img, text} = ea
+                return (
+                  <DemoCard 
+                    key={index}
+                    demoName={demoName}
+                    path={path}
+                    image={img}
+                    text={text}
+                  />
+              )})}
+
           </div>
         </div>
       </div>

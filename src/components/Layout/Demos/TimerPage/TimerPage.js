@@ -5,7 +5,7 @@ class TimerPage extends Component {
     super(props)
     this.state = {
       time: '00:00',
-      timer: null
+      timer: {minutes: 0, seconds: 0, ms: 0}
     }
     this.setDate = this.setDate.bind(this);
     this.startTimer = this.startTimer.bind(this);
@@ -14,22 +14,22 @@ class TimerPage extends Component {
   }
 
   setDate() {
-    this.setState({
-      time : this.timeNow()
-    });
-  }
-
-  timeNow() {             // timeNow provided by DreamTeK
     var d = new Date(),
       h = (d.getHours()<10 ? '0':'') + d.getHours(),
       m = (d.getMinutes()<10 ? '0':'') + d.getMinutes();
-    return `${h}:${m} `;
+    this.setState({
+      time : `${h}:${m}`
+    });
   }
 
   startTimer() {
+    let {minutes, seconds, ms} = this.state.timer
+
     this.interval = setInterval( () => {
       this.setState({
-        timer: this.state.timer += 1
+        timer :{
+          ms: this.state.timer.ms += 1
+        }
       })
     }, 100)
   }
@@ -45,10 +45,11 @@ class TimerPage extends Component {
   }
 
   render() {
+    const { minutes, seconds, ms } = this.state.timer
     return (
       <div>
         <h1> { this.state.time }</h1>
-        <h1>{ (this.state.timer) ? this.state.timer : '00:00' }</h1>
+        <h1>{ `${minutes}: ${seconds}: ${ms}` }</h1>
         <button onClick={this.setDate}>Update Time</button>
         <button onClick={this.startTimer}>Start</button>
         <button onClick={this.stopTimer}>Stop</button>

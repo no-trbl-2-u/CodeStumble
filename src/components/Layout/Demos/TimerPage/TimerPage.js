@@ -28,10 +28,11 @@ class TimerPage extends Component {
     this.interval = setInterval( () => {
       this.setState({
         timer :{
-          ms: this.state.timer.ms += 1
+          seconds: seconds += 1,
+          minutes: seconds > 59 ? seconds +=1 : seconds,
         }
       })
-    }, 100)
+    }, 1000)
   }
 
   stopTimer() {

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import AboutIMG from './AboutIMG/AboutIMG'
+import AboutIMG from './AboutIMG/AboutIMG';
+import AboutSecret from './AboutSecret'
 import './about.css';
 
 
 /* TODO:
-        -> Write a little about who I am and what this site is for
-        -> Create a route to include a demos/projects section
+        --> 
 */
 class About extends Component {
   render() {
@@ -32,6 +32,8 @@ class About extends Component {
 
         <div className="About-links container">
           <ul className="About-links-inner">
+            
+            {/* Left - Github */}
             <li>
               <a href="https://github.com/no-trbl-2-u">
                   <i className="fa fa-github"></i>
@@ -39,14 +41,22 @@ class About extends Component {
               </a>
             </li>
 
+            {/* Left - SOMETHING */}
             <li>Place Two</li>
+          
           </ul>
+
           <ul className="About-links-inner">
+            {/* Right - SOMETHING */}
             <li>Place Three</li>
+
+            {/* Right - SOMETHING */}
             <li>Place Four</li>
           </ul>
         </div>
-      
+
+        {/* Commented message for fellow Developers */}
+        <AboutSecret />
       </div>
       
     )

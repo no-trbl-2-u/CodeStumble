@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-has-alt */
 import React, { Component } from 'react';
 
 class TimerPage extends Component {
@@ -24,16 +25,21 @@ class TimerPage extends Component {
 
   startTimer() {
     let {minutes, seconds, ms} = this.state.timer
+    console.log(minutes, seconds, ms)
 
-    this.interval = setInterval( () => {
-      this.setState({
-        timer :{
-          ms: (ms += 1) % 10,
-          seconds: ms > 9 ? (seconds += 1) % 60 : seconds,
-          minutes: seconds > 59 ? minutes += 1 : minutes,
-        }
-      })
-    }, 1000)
+    const addMinute = () => this.setState({minutes: (minutes += 1) % 59})
+    const addSecond = () => this.setState({seconds: (seconds += 1) % 59})
+    
+    const addMS = () => this.setState({ms: (ms += 1) % 9})
+
+    // this.interval = setInterval( () => {
+    //   addMS();
+    //   if(ms === 59){addSecond()}
+    //   if(seconds === 59){addMinute()}
+
+    // }, 100)
+
+    this.setState({ms: ms + 1})
   }
 
   stopTimer() {

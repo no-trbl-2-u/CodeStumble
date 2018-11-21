@@ -3,6 +3,9 @@ import { Link } from '@reach/router';
 
 import './demoCard.css'
 
+//  TODO -> Double check sizes for bootstrap's cols
+//  TODO -> Create some animations to make the democards responsive
+
 const DemoCard = (props) => {
   const {demoName, path, image, text } = props
   return (

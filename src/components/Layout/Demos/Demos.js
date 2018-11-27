@@ -29,7 +29,7 @@ class Demos extends Component {
           <div className="row">
             {this.state.demos
               .map((ea, index) =>{
-                const {demoName, path, img, text} = ea
+                const {demoName, path, img, text, codeLink} = ea
                 return (
                   <DemoCard 
                     key={index}
@@ -37,6 +37,7 @@ class Demos extends Component {
                     path={path}
                     image={img}
                     text={text}
+                    codeLink={codeLink}
                   />
               )})}
 

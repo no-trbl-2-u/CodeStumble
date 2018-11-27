@@ -1,57 +1,59 @@
+import sounds from '../sounds'
+
 const keys= [
   {
     sound: 'clap',
     dataKey: 65,
     kbdKey: 'A',
-    source: '/static/media/clap.a6e86dd7.wav'
+    source: sounds[1]
   },
   {
     sound: 'hiHat',
     dataKey: 83,
     kbdKey: 'S',
-    source: '/static/media/hihat.4ba39e07.wav'
+    source: sounds[2]
   },
   {
     sound: 'kick',
     dataKey: 68,
     kbdKey: 'D',
-    source: '/static/media/kick.4dd58595.wav'
+    source: sounds[3]
   },
   {
     sound: 'openHat',
     dataKey: 70,
     kbdKey: 'F',
-    source: '/static/media/openhat.a62db465.wav'
+    source: sounds[4]
   },
   {
     sound: 'boom',
     dataKey: 71,
     kbdKey: 'G',
-    source: '/static/media/boom.550be808.wav'
+    source: sounds[0]
   },
   {
     sound: 'ride',
     dataKey: 72,
     kbdKey: 'H',
-    source: '/static/media/ride.b0d70ec5.wav'
+    source: sounds[5]
   },
   {
     sound: 'snare',
     dataKey: 74,
     kbdKey: 'J',
-    source: '/static/media/snare.80c4129b.wav'
+    source: sounds[6]
   },
   {
     sound: 'tom',
     dataKey: 75,
     kbdKey: 'K',
-    source: '/static/media/tom.572ed39d.wav'
+    source: sounds[7]
   },
   {
     sound: 'tink',
     dataKey: 76,
     kbdKey: 'L',
-    source: '/static/media/tink.2a6bb6f5.wav'
+    source: sounds[8]
   },
 ]
 

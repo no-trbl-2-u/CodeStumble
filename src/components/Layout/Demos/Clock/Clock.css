@@ -1,0 +1,92 @@
+.clock-container {
+  margin: 32px;
+  border-radius: 25px;
+  display: flex;
+  flex: 1;
+  min-height: 80vh;
+  align-items: center;
+
+  background: #018DED url(https://www.imgbase.info/images/safe-wallpapers/digital_art/1_miscellaneous_digital_art/58893_1_miscellaneous_digital_art_retro_synthwave.jpg);
+  background-size: cover;
+
+  font-family: 'helvetica neue';
+  text-align: center;
+  font-size: 10px;
+
+}
+
+.clock {
+  width: 30rem;
+  height: 30rem;
+  border: 20px solid white;
+  border-radius: 50%;
+  margin: 50px auto;
+  position: relative;
+  top: -100px;
+  padding: 2rem;
+  box-shadow:
+    0 0 0 4px rgba(0,0,0,0.1),
+    inset 0 0 0 3px rgba(100, 100, 100, 0.5),
+    inset 0 0 10px black,
+    0 0 10px rgba(0,0,0,0.2);
+}
+
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px); /* account for the height of the clock hands */
+  transform: rotate(90deg)
+}
+
+.hand {
+  width: 50%;
+  height: 6px;
+  background: black;
+  position: absolute;
+  top: 50%;
+
+  /* Change transforming origin to 100%, default=50% */
+  transform-origin: 100%;
+  /* transform: rotate(90deg); */
+  transition: all 0.05s ease-in-out;
+  /* Custom transition timing */
+  transition-timing-function: cubic-bezier(0, 1.43, 0.34, 1.35);
+}
+
+.second-hand {
+  height: 3px;
+  border: 1px solid black;
+  background-color: white;
+  box-shadow: 2px 3px 20px 0 black;
+}
+
+.hour-hand {
+  width: 50%;
+}
+
+
+/* Digital Time under Clock Face */
+.digital-time {
+  position: absolute;
+  top: 400px;
+  left: -140px;
+  width: 200%;
+  
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 25px;
+  font-size: 48px;
+
+  box-shadow:
+    0 0 0 4px rgba(0,0,0,0.1),
+    inset 0 0 10px rgb(20, 20, 20),
+    0 0 10px rgba(0,0,0,0.2);
+  
+}
+
+.digital-time span {
+  margin: 10px;
+  color: white;
+  font-weight: 100;
+  text-emphasis: shadow 10px;
+}

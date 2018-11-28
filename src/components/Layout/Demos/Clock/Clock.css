@@ -58,13 +58,24 @@
   height: 3px;
   border: 1px solid black;
   background-color: white;
-  box-shadow: 2px 3px 20px 0 black;
+  box-shadow: 2px 3px 20px 0 rgb(242, 158, 245);
+}
+
+.min-hand {
+  height: 5px;
+  border: 1px solid black;
+  background-color: white;
+  box-shadow: 2px 3px 20px 0 rgb(242, 158, 245);
+
 }
 
 .hour-hand {
-  width: 50%;
-}
+  height: 5px;
+  border: 1px solid black;
+  background-color: rgb(244, 121, 255);
+  box-shadow: 2px 3px 20px 0 rgb(242, 158, 245);
 
+}
 
 /* Digital Time under Clock Face */
 .digital-time {
@@ -73,6 +84,7 @@
   left: -140px;
   width: 200%;
   
+  /* background-color:red; */
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 25px;
   font-size: 48px;
@@ -87,6 +99,6 @@
 .digital-time span {
   margin: 10px;
   color: white;
-  font-weight: 100;
-  text-emphasis: shadow 10px;
+  font-weight: lighter;
+  text-shadow: 2px 2px black ;
 }

@@ -43,8 +43,9 @@
 }
 
 .linkBox ul li:hover{
-  border: 2px solid white;
-  border-radius: 20px;
+  /* border: 2px solid white;
+  border-radius: 20px; */
+  transform: scale(1.3);
 }
 
 .linkBox ul a:link {

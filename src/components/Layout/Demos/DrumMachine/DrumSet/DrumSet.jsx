@@ -51,9 +51,6 @@ class DrumSet extends Component {
     document.addEventListener('keydown', event => {
       this.handleKBD(event);
     })
-
-    const audioTest = Array.from(document.querySelectorAll('audio'))
-    console.log(audioTest)
   }
 
   render() {

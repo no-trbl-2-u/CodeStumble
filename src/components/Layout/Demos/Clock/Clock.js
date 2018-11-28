@@ -30,6 +30,13 @@ class Clock extends Component {
     const minuteHand = document.querySelector('.min-hand');
     const hourHand = document.querySelector('.hour-hand');
 
+
+    /* TODO :
+          --> Refactor all these computations into a function
+          --> Get percentage of minutes in the current hour, use to move hour throughout the hour
+          --> Do the same for minutes
+    */
+
     secondHand.style.transform = `rotate(${ (seconds / 60) * 360 }deg)`;
     minuteHand.style.transform = `rotate(${ (minutes / 60) * 360 }deg)`;
     hourHand.style.transform = `rotate(${ (hours / 12) * 360 }deg)`;
@@ -37,11 +44,11 @@ class Clock extends Component {
   }
 
   componentDidMount() {
-    // const updateUI = () => {
-    //   this.setTime();
-    //   this.setClasses();
-    // }
-    this.interval = setInterval(this.setTime(), 1000)
+    const updateUI = () => {
+      this.setTime();
+      this.setClasses();
+    }
+    this.interval = setInterval(updateUI, 1000)
   }
 
   componentWillUnmount() {

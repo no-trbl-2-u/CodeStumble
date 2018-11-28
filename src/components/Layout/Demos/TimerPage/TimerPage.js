@@ -25,12 +25,6 @@ class TimerPage extends Component {
 
   startTimer() {
     let {minutes, seconds, ms} = this.state.timer
-    console.log(minutes, seconds, ms)
-
-    const addMinute = () => this.setState({minutes: (minutes += 1) % 59})
-    const addSecond = () => this.setState({seconds: (seconds += 1) % 59})
-    
-    const addMS = () => this.setState({ms: (ms += 1) % 9})
 
     // this.interval = setInterval( () => {
     //   addMS();
@@ -40,6 +34,8 @@ class TimerPage extends Component {
     // }, 100)
 
     this.setState({ms: ms + 1})
+    this.setState({seconds: seconds + 1})
+    this.setState({minutes: minutes + 1})
   }
 
   stopTimer() {

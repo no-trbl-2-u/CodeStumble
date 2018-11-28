@@ -22,7 +22,7 @@
   border-radius: 50%;
   margin: 50px auto;
   position: relative;
-  top: -100px;
+  /* top: -100px; */
   padding: 2rem;
   box-shadow:
     0 0 0 4px rgba(0,0,0,0.1),
@@ -78,10 +78,10 @@
 
 /* Digital Time under Clock Face */
 .digital-time {
-  position: absolute;
-  top: 400px;
-  left: -140px;
-  width: 200%;
+  position: relative;
+  top: 80px;
+  left: -200px;
+  width: 300%;
   
   /* background-color:red; */
   background-color: rgba(0, 0, 0, 0.4);
@@ -100,4 +100,29 @@
   color: white;
   font-weight: lighter;
   text-shadow: 2px 2px black ;
+}
+
+/* Media Query to handle mobile devices */
+
+@media screen and (max-device-width: 540px) {
+  .clock-container {
+    margin: 0px;
+    border-radius: 0px;
+  }
+  
+  .digital-time {
+    /* visibility: hidden; */
+    /* width: 200%; */
+    transform: scale(0.7);
+    margin: 0px;
+    padding: 0px;
+    left: -235px;
+  }
+
+  .clock {
+    top: -50px;
+    left: 10px;
+    transform: scale(0.7);
+  }
+
 }

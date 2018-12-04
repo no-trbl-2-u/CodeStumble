@@ -18,6 +18,7 @@ import Demos from '../components/Layout/Demos/Demos';
 import TimerPage from '../components/Layout/Demos/TimerPage/TimerPage';
 import DrumMachine from '../components/Layout/Demos/DrumMachine/DrumMachine';
 import Clock from '../components/Layout/Demos/Clock/Clock'
+import CSSVariables from '../components/Layout/Demos/CSSVariables/CSSVariables'
 
 import articles from '../components/Layout/Article/md_articles/index';
 
@@ -69,6 +70,7 @@ class App extends Component {
             <TimerPage path='/explore/timer' />
             <DrumMachine path='/explore/drummachine' />
             <Clock path='/explore/clock' />
+            <CSSVariables path='/explore/cssvariables' />
           </Router>
         </Layout> 
 

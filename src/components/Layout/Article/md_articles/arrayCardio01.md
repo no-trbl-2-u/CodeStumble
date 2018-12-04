@@ -1,1 +1,127 @@
-# Here is the Array Cardio
+# Array Cardio 01
+[Here is the LINK to the code](https://github.com/no-trbl-2-u/MyReact30/tree/master/04-arrayCardio01 "Github for this code")
+
+## Given a few arrays, solve these 8 problems:
+
+*Disclaimer: This article/exercise assumes you know how Higher-Order-Functions work. My solutions to these are by no means the best/most readable/best practice. I, myself, am going through this exercise.*
+
+## 1. Filter the list of inventors for those who were born in the 1500's
+First, I like to get a simple console.log to get an idea for the data I'll be working with
+
+```js
+inventors
+  .map(ea => console.log(ea.year))
+```
+
+Now if you check your console, you'll see each and every year, which tells us that we've successfully targeted the data we need to evaluate.
+
+Array.prototype.filter() takes a function (that returns a boolean) and runs that function on each element of the array. It then returns an array filled with all the elements that returned true.
+
+```js
+const results01 = inventors
+  .filter(ea => ea.year > 1500 && ea.year < 1600)
+```
+
+Now log out results01 to see your new array of inventors that were born in the 1500's.
+
+
+## 2. Give us an array of the inventors' first and last names
+
+Array.prototype.map() takes a function and returns a new array filled with the application of the function on each element of the original array.
+
+This (anonymous) function we're going to pass it is going to strip the data located at the "first" key and the data located at the "last" key and return a new object with that data.
+
+```js
+const results02 = inventors
+  .map(ea => ({first: ea.first, last: ea.last}))
+```
+
+*Disclaimer: Since we're using anonymous **arrow** functions, we have to wrap our return statement in parenthesis (). If we don't it'll think our object innerds is the return statement*
+```js
+const mistake = data
+  .map(ea => {key01: ea.key01, key02: ea.key02})
+```
+*The interpreter will NOT like this code*
+
+## 3. Sort the inventors by birthdate, oldest to youngest
+
+Array.prototype.sort() is another array method that takes a function and returns an array where that function was run on each element. The difference here is, the function itself determines HOW the returned array will be sorted. Here are a few examples:
+```js
+const numArray = [2, 3, 1, 4]
+const alphaArray = ['d', 'a', 'c', 'b']
+const wordArray = ['ant', 'dog', 'cat', 'bat']
+
+const numAsc = (a, b) => a - b;
+const numDes = (a, b) => b - a;
+
+const alphaAsc = (a, b) => a > b;
+const alphaDec = (a, b) => b > a;
+
+// Example
+console.log(numArray.sort(numAsc)) // [1, 2, 3, 4]
+```
+
+Now, to take that information and apply it to this solution. We know that the "year" value in each inventor is a number. So we can use subtraction to sort. We also know that since it's an object we're sorting, we'll have to provide the return statement with the key to get to that data.
+
+```js
+const results03 = inventors
+  .sort((a, b) => b.year - a.year)
+```
+
+*Disclaimer: Array.prototype.sort() is a destructive method and mutates the original array. I would recommend creating a copy of the array when you call sort, like so:*
+```js
+const results03 = [...inventors]
+  .sort((a, b) => b.year - a.year)
+```
+This uses ES6's spread operator to create a copy of the original array, thus, preventing any mutations to the original array.
+
+## 4. How many years did all the inventors live?
+
+Array.prototype.reduce() is, in my opinion, the most difficult of the stock array methods. It too takes a function, with two arguments, the accumulator and each current object. We'll use our "numArray" from earlier and find the sum of that array. Example:
+```js
+const sumOfNumArray = numArray
+  .reduce((accum, each) => accum += each) // 10
+```
+
+To apply that to the solution, let's jump right in:
+
+```js
+const results04 = inventors
+  .reduce((accum, each) => accum += (each.passed - each.year))
+```
+
+This should have worked, except it didn't. The reason it didn't work wasn't entirely obvious at first until
+[read over MDN's definition of Array.prototype.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce "MDN's reduce()")
+
+## 5. Sort the inventors by years lived
+
+My initial attempt looked like this:
+```js
+const results05 = [...inventors].
+  sort((a, b) => (a.passed - a.years) - (b.passed - b.years))
+```
+
+I don't think that did what I wanted it to do, so I'm going to do something a little different. These "Higher-Order-Functions" that come stock with every instance of an array, can be composed to create more intricate returned arrays. I'm going to use [Object.assign()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign "Object.assign") to create a new object that contains their "years lived" data so I can sort with that instead of relying on "On the fly variables".
+
+```js
+const results05 = [...inventors]
+  .map(ea => Object.assign({}, ea, {lived: (ea.passed - ea.year)}))
+  .sort((a, b) => a.lived - b.lived)
+```
+
+Object.assign() takes an arbitrary number of arguments, but the first is always the resulting object. To keep this immutable, we'll place an empty object in the first argument, each inventor object in the next argument, and the newest addition to the object, "lived". This results in something like:
+```js
+{ 
+  first: 'Lise',
+  last: 'Meitner',
+  year: 1878,
+  passed: 1968,
+  lived: 90
+}
+```
+
+If you cross reference the resulting array with the initial attempt, you'll see the initial attempt didn't actually work. I'll leave it for you to figure out why the initial sorting expression didn't work as intended.
+
+## 6. Create a list of Boulevards in Paris that contain 'de' anywhere in the name
+
+*To be Continued*...

@@ -1,5 +1,6 @@
 import example01_md from './example01.md';
 import intro_md from './intro.md';
+import arraycardio01_md from './arrayCardio01.md';
 
 const example01 = {
   md: example01_md,
@@ -13,9 +14,16 @@ const intro = {
   path: 'intro'
 }
 
+const arraycardio01 = {
+  md: arraycardio01_md,
+  title: "Array Cardio 01",
+  path: 'arraycardio01'
+}
+
 const articles = {
   example01,
-  intro
+  intro,
+  arraycardio01
 }
 
 export default articles;

@@ -1,18 +1,23 @@
 .articleLinks {
   font-size: 24px;
-}
 
-.articleLinks {
+  margin: 50px;
+  padding: 20px;
+
   background-color: #282C34;
   border-radius: 20px;
   color: #F22749; /* Link button */
+}
+
+.articleLinks :hover {
+  font-size: 30px;
 }
 
 .articleLink {
   margin: 10px;
 }
 
-.articleLink a{
+.articleLink a {
   color: #91B974;
   margin: 10px;
 }
@@ -20,21 +25,3 @@
 .ArticleIndex-container {
   margin: 15px;
 }
-
-.ArticleIndex-container h2 {
-  text-align: center;
-  /* margin: 15px; */
-  margin: 5px;
-
-  border-radius: 20px;
-  
-  background-color: #282C34;
-  color: #91B974;
-}
-/* 
-#91B974
-#F22749
-#5C67A7
-#2F4F4F
-#291F34
-#282C34 - Black-better */

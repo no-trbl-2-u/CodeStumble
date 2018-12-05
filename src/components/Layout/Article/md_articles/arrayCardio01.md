@@ -37,15 +37,18 @@ const results02 = inventors
 ```
 
 *Disclaimer: Since we're using anonymous **arrow** functions, we have to wrap our return statement in parenthesis (). If we don't it'll think our object innerds is the return statement*
+
 ```js
 const mistake = data
   .map(ea => {key01: ea.key01, key02: ea.key02})
 ```
+
 *The interpreter will NOT like this code*
 
 ## 3. Sort the inventors by birthdate, oldest to youngest
 
 Array.prototype.sort() is another array method that takes a function and returns an array where that function was run on each element. The difference here is, the function itself determines HOW the returned array will be sorted. Here are a few examples:
+
 ```js
 const numArray = [2, 3, 1, 4]
 const alphaArray = ['d', 'a', 'c', 'b']
@@ -69,15 +72,18 @@ const results03 = inventors
 ```
 
 *Disclaimer: Array.prototype.sort() is a destructive method and mutates the original array. I would recommend creating a copy of the array when you call sort, like so:*
+
 ```js
 const results03 = [...inventors]
   .sort((a, b) => b.year - a.year)
 ```
+
 This uses ES6's spread operator to create a copy of the original array, thus, preventing any mutations to the original array.
 
 ## 4. How many years did all the inventors live?
 
 Array.prototype.reduce() is, in my opinion, the most difficult of the stock array methods. It too takes a function, with two arguments, the accumulator and each current object. We'll use our "numArray" from earlier and find the sum of that array. Example:
+
 ```js
 const sumOfNumArray = numArray
   .reduce((accum, each) => accum += each) // 10
@@ -96,6 +102,7 @@ This should have worked, except it didn't. The reason it didn't work wasn't enti
 ## 5. Sort the inventors by years lived
 
 My initial attempt looked like this:
+
 ```js
 const results05 = [...inventors].
   sort((a, b) => (a.passed - a.years) - (b.passed - b.years))
@@ -110,6 +117,7 @@ const results05 = [...inventors]
 ```
 
 Object.assign() takes an arbitrary number of arguments, but the first is always the resulting object. To keep this immutable, we'll place an empty object in the first argument, each inventor object in the next argument, and the newest addition to the object, "lived". This results in something like:
+
 ```js
 { 
   first: 'Lise',

@@ -1,6 +1,8 @@
 # Array Cardio 01
 [Here is the LINK to the code](https://github.com/no-trbl-2-u/MyReact30/tree/master/04-arrayCardio01 "Github for this code")
 
+[Here is the LINK for the original, Javascript30 course](https://Javascript30.com "#Javascript30")
+
 ## Given a few arrays, solve these 8 problems:
 
 *Disclaimer: This article/exercise assumes you know how Higher-Order-Functions work. My solutions to these are by no means the best/most readable/best practice. I, myself, am going through this exercise.*
@@ -108,7 +110,7 @@ const results05 = [...inventors].
   sort((a, b) => (a.passed - a.years) - (b.passed - b.years))
 ```
 
-I don't think that did what I wanted it to do, so I'm going to do something a little different. These "Higher-Order-Functions" that come stock with every instance of an array, can be composed to create more intricate returned arrays. I'm going to use [Object.assign()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign "Object.assign") to create a new object that contains their "years lived" data so I can sort with that instead of relying on "On the fly variables".
+I don't think that did what we wanted it to do, so we're going to do something a little different. These "Higher-Order-Functions" that come stock with every instance of an array, can be composed to create more intricate returned arrays. We're going to use [Object.assign()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign "Object.assign") to create a new object that contains their "years lived" data so we can sort with that instead of relying on "On the fly variables".
 
 ```js
 const results05 = [...inventors]
@@ -132,7 +134,9 @@ If you cross reference the resulting array with the initial attempt, you'll see 
 
 ## 6. Create a list of Boulevards in Paris that contain 'de' anywhere in the name
 
-This one took a lot of playing around in the console with dummy variables and lots of Array.from(querySelectorAll()) calls.
+This one took a lot of playing around in the console with dummy variables and lots of Array.from(querySelectorAll()) calls. Which after so much trial and error led to me...
+
+*Consulting the Video*
 
 ```js
 const start = document
@@ -183,13 +187,83 @@ const sortedRecord = peopleRecord
 
 This sorting algorithm was only that simple because we made a nice simple record to work off of. :)
 
-## 8.Sum up the instances of each of these
+## 8.Sum up the instances of each of these with reduce
 
 ```js
 const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ]
 ```
+My first instinct is to use a forEach method to iterate over these and keep a tally of each word. Then I'd just reduce that tally.
 
-In order to solve this, we'll have to...
+```js
+const vehicleRecord = data
+  .map(ea => ({name: ea, count: 0}))
+  .map(ea => {
+    if(...) ea.count += 1
+  })
+```
 
-*To be Continued...*
+This was an absolute failure. I thought turning each element into an object would make life easier. Turns out the opposite happens. If I knew how to do emojis in markdown, I'd liken this code to a big 'ol turd. I also tried a single reduce method with a few different "if" statements that I'll omit for now. It's now time to
 
+*Consult the video...*
+
+Turns out we was ALMOST there with this whole "convert it to an object" thing, sort of...
+
+```js
+const vehicleRecord = data
+  .reduce((obj, item) => {
+    // Check if it exists already
+    if(!obj[item]){
+      obj[item] = 0;
+    }
+    // If it does, tally it up
+    obj[item] += 1;
+
+    // Return the entire object
+    return obj
+  }, {})
+```
+
+I know what you're thinking..."But this isn't the solution, this just gives us a big object with all the tallies". Well, here is where we'll stop consulting the video and attempt to solve it from here ;).
+
+Let's get those numbers isolated somehow...
+
+
+```js
+const arrayOfArrays
+arrayOfArrays = Array.from(Object.entries(vehicleRecord))
+
+
+/* [ [ 'car', 5 ],
+  [ 'truck', 3 ],
+  [ 'bike', 2 ],
+  [ 'walk', 2 ],
+  [ 'van', 2 ] ] */
+```
+
+Now that we have another array, we can go back to using map, filter, reduce. First, let's get those words out of there...
+
+```js
+const vehicleTallies = arrayOfArrays
+  .filter(ea => Number.isInteger(ea))
+
+```
+
+Buuuuut, that doesn't work. Unfortunately for us, we've gotta do something with this data before we can use filter again. This is where **Flattening** comes in (I think).
+
+*Disclaimer: You could **definitely** solve this whole thing in a much simpler way, but if you've made it this far, you'd probably appreciate the deep dive. Also, flatMap() is a thing and I'm pretty sure it'd fix this whole thing up.*
+
+```js
+const vehicleArraysFlattened = arrayOfArrays
+  .reduce((prev, next) => prev.concat(next))
+
+  // [ 5, 3, 2, 2, 2 ]
+```
+
+Flattening is just smashing your data's guts together to make new data that's easier to traverse. The way I implemented it above is just one way to do it and if you try it elsewhere, you'll see this actually only works on one level. If we go one deeper and stick an Array in an Array in Array in Array in... We'd have to either find a better entry point, flatten the array n times, or make a better flatten function. For now, let's just sum up these numbers with reduce, the whole point of this exercise.
+
+```js
+const sumOfTallies = vehicleTallies
+  .reduce((accum, ea) => accum += ea)
+
+// 14
+```

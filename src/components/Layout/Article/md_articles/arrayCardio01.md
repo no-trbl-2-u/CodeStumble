@@ -128,8 +128,68 @@ Object.assign() takes an arbitrary number of arguments, but the first is always 
 }
 ```
 
-If you cross reference the resulting array with the initial attempt, you'll see the initial attempt didn't actually work. I'll leave it for you to figure out why the initial sorting expression didn't work as intended.
+If you cross reference the resulting array with the initial attempt, you'll see the initial attempt didn't actually work. I'll leave it for you to figure out why the initial sorting expression didn't work as intended. *Mostly because I'm not sure :)*
 
 ## 6. Create a list of Boulevards in Paris that contain 'de' anywhere in the name
 
-*To be Continued*...
+This one took a lot of playing around in the console with dummy variables and lots of Array.from(querySelectorAll()) calls.
+
+```js
+const start = document
+  .querySelector('.mw-category');
+const links = Array
+  .from(start.querySelectorAll('a'));
+const _cities = link
+  .map(ea => ea.textContent);
+```
+
+Now to filter out the unneeded array elements. In order to do this, my first guess would be to create an array of arrays of each city name. Then run Array.prototype.includes() on each individual element within the array. Since filter is looking for a boolean and includes gives it just that, we're provided a new array of all the cities that have the word "de" in it. Also, since we used split, we won't get a false positive on the 'de' search. 
+
+```js
+const de = cities
+  .filter(ea => ea
+    .split(' ')
+    .includes('de')
+  );
+
+```
+
+## 7. Sort the "People" array by last name
+
+This one is much like the previous sort example, except we don't have a structured record of the data. Instead, we have a small array of ["lastname, firstname", ...] over and over. So first let's create a solid record to work with.
+
+```js
+// This will create the array of arrays
+const people2 = people
+  .map(ea => ea.split(','));
+
+```
+
+We will then need to convert each and every internal element into its own object with the keys: {first, last}
+
+```js
+const peopleRecord = people2
+  .map(ea => ({first:ea[1], last: ea[0]}))
+```
+
+peopleRecord is now an array of all objects containing all the people's first & last names.
+It just so happens it's already sorted by last name. If that array wasn't already sorted, we could:
+
+```js
+const sortedRecord = peopleRecord
+  .sort((prev, next) => prev.last > next.last ? 1 : -1)
+
+```
+
+This sorting algorithm was only that simple because we made a nice simple record to work off of. :)
+
+## 8.Sum up the instances of each of these
+
+```js
+const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ]
+```
+
+In order to solve this, we'll have to...
+
+*To be Continued...*
+

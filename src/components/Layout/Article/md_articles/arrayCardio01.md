@@ -20,7 +20,7 @@ Now if you check your console, you'll see each and every year, which tells us th
 Array.prototype.filter() takes a function (that returns a boolean) and runs that function on each element of the array. It then returns an array filled with all the elements that returned true.
 
 ```js
-const results01 = inventors
+const inventorsIn1500 = inventors
   .filter(ea => ea.year > 1500 && ea.year < 1600)
 ```
 
@@ -34,7 +34,7 @@ Array.prototype.map() takes a function and returns a new array filled with the a
 This (anonymous) function we're going to pass it is going to strip the data located at the "first" key and the data located at the "last" key and return a new object with that data.
 
 ```js
-const results02 = inventors
+const namedInventors = inventors
   .map(ea => ({first: ea.first, last: ea.last}))
 ```
 
@@ -69,14 +69,14 @@ console.log(numArray.sort(numAsc)) // [1, 2, 3, 4]
 Now, to take that information and apply it to this solution. We know that the "year" value in each inventor is a number. So we can use subtraction to sort. We also know that since it's an object we're sorting, we'll have to provide the return statement with the key to get to that data.
 
 ```js
-const results03 = inventors
+const sortedInventorsMutate = inventors
   .sort((a, b) => b.year - a.year)
 ```
 
 *Disclaimer: Array.prototype.sort() is a destructive method and mutates the original array. I would recommend creating a copy of the array when you call sort, like so:*
 
 ```js
-const results03 = [...inventors]
+const sortedInventorsNonMutate = [...inventors]
   .sort((a, b) => b.year - a.year)
 ```
 
@@ -94,26 +94,33 @@ const sumOfNumArray = numArray
 To apply that to the solution, let's jump right in:
 
 ```js
-const results04 = inventors
+const sumOfInventorsYearsLived = inventors
   .reduce((accum, each) => accum += (each.passed - each.year))
 ```
 
 This should have worked, except it didn't. The reason it didn't work wasn't entirely obvious at first until
 [read over MDN's definition of Array.prototype.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce "MDN's reduce()")
 
+Reduce has an optional argument that is used as the value for the inital state of the accumulator, or rather, "where to start". So... 
+
+```js
+const sumOfInventorsYearsLived = inventors
+  .reduce((accum, ea) => accum += (ea.passed - ea.year), 0)
+```
+
 ## 5. Sort the inventors by years lived
 
 My initial attempt looked like this:
 
 ```js
-const results05 = [...inventors].
+const inventorsSortByYearsLived = [...inventors].
   sort((a, b) => (a.passed - a.years) - (b.passed - b.years))
 ```
 
 I don't think that did what we wanted it to do, so we're going to do something a little different. These "Higher-Order-Functions" that come stock with every instance of an array, can be composed to create more intricate returned arrays. We're going to use [Object.assign()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign "Object.assign") to create a new object that contains their "years lived" data so we can sort with that instead of relying on "On the fly variables".
 
 ```js
-const results05 = [...inventors]
+const inventorsSortByYearsLived = [...inventors]
   .map(ea => Object.assign({}, ea, {lived: (ea.passed - ea.year)}))
   .sort((a, b) => a.lived - b.lived)
 ```
@@ -206,7 +213,7 @@ This was an absolute failure. I thought turning each element into an object woul
 
 *Consult the video...*
 
-Turns out we was ALMOST there with this whole "convert it to an object" thing, sort of...
+Turns out we were ALMOST there with this whole "convert it to an object" thing, sort of...
 
 ```js
 const vehicleRecord = data
@@ -224,6 +231,8 @@ const vehicleRecord = data
 ```
 
 I know what you're thinking..."But this isn't the solution, this just gives us a big object with all the tallies". Well, here is where we'll stop consulting the video and attempt to solve it from here ;).
+
+*Disclaimer: Turns out this WAS the solution he was going for, but let's keep going and sum their ages with some over-the-top & unnecasary data manipulation*
 
 Let's get those numbers isolated somehow...
 

@@ -6,13 +6,13 @@
 
 You can head over to the About me section which has both a brief bio and a series of projects that demonstrate my abilities.
 
-If you have any questions at all, feel free to email me @ _____
+If you have any questions at all, feel free to email me @ anthonyTJallen@gmail.com
 
 ```javascript
 const me = {
   name: 'Anthony (TJ) Allen',
   age: 29,
-  beganLearning: "Mar. '18",
+  beganLearning: "Mar. '18, 2018",
   languages: [
     js,
     python,

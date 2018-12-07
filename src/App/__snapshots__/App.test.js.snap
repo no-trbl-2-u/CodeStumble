@@ -7,13 +7,9 @@ exports[`renders a snapshot 1`] = `
   <div
     className="sideNavBlock"
   >
-    <h3>
-       Code Stumble 
-    </h3>
-     
-    <br />
-     
-    <br />
+    <h2>
+       &lt; CS /&gt; 
+    </h2>
     <div
       className="portImgBlock"
     >
@@ -23,18 +19,12 @@ exports[`renders a snapshot 1`] = `
         onClick={[Function]}
       >
         <img
-          alt="WebmasterIMG"
+          alt="SideNavIMG"
           className="portfolioImg img-circle"
           src="Retro landscape.jpg"
         />
       </a>
     </div>
-     
-    <br />
-     
-    <br />
-     
-    <br />
     <div
       className="linkBox"
     >
@@ -46,44 +36,51 @@ exports[`renders a snapshot 1`] = `
         >
           <li>
             <i
-              className="fa fa-home my-float"
+              className="fa fa-home"
             />
             <span>
                Home
             </span>
           </li>
         </a>
-         
-        <br />
+        <a
+          href="/articles"
+          onClick={[Function]}
+        >
+          <li>
+            <i
+              className="fa fa-list-ul"
+            />
+            <span>
+               Learn 
+            </span>
+          </li>
+        </a>
+        <a
+          href="/explore"
+          onClick={[Function]}
+        >
+          <li>
+            <i
+              className="fa fa-magic"
+            />
+            <span>
+               Explore 
+            </span>
+          </li>
+        </a>
         <a
           href="/about"
           onClick={[Function]}
         >
           <li>
             <i
-              className="fa fa-user my-float"
+              className="fa fa-user"
             />
             <span>
-               About
+               About Me
             </span>
           </li>
-        </a>
-         
-        <br />
-        <a
-          href="/article"
-          onClick={[Function]}
-        >
-          <li>
-            <i
-              className="fa fa-list-ul my-float"
-            />
-            <span>
-               Article Index
-            </span>
-          </li>
-           
-          <br />
         </a>
       </ul>
     </div>
@@ -91,15 +88,21 @@ exports[`renders a snapshot 1`] = `
   <div
     className="content-container"
   >
-    <header>
-      <h2
+    <a
+      aria-current="page"
+      href="/"
+      onClick={[Function]}
+    >
+      <header
         className="App-header"
       >
-        <i>
+        <h2
+          className="welcome_banner"
+        >
           Code Stumble
-        </i>
-      </h2>
-    </header>
+        </h2>
+      </header>
+    </a>
     <div
       role="group"
       style={
@@ -112,16 +115,9 @@ exports[`renders a snapshot 1`] = `
       <div
         className="Home-container"
       >
-        <h1
-          id="welcome_banner"
-        >
-          Welcome to Code Stumble
-        </h1>
-        <h3
-          align="center"
-        >
-           If you're not lost, you're not exploring! 
-        </h3>
+        <span>
+          welcome.md
+        </span>
       </div>
     </div>
   </div>
@@ -140,11 +136,32 @@ exports[`renders a snapshot 1`] = `
     >
       <li>
         <a
-          href="/article"
+          aria-current="page"
+          href="/"
+          onClick={[Function]}
+        >
+          <i
+            className="fa fa-home my-float"
+          />
+        </a>
+      </li>
+      <li>
+        <a
+          href="/articles"
           onClick={[Function]}
         >
           <i
             className="fa fa-list-ul my-float"
+          />
+        </a>
+      </li>
+      <li>
+        <a
+          href="/explore"
+          onClick={[Function]}
+        >
+          <i
+            className="fa fa-magic my-float"
           />
         </a>
       </li>
@@ -158,32 +175,7 @@ exports[`renders a snapshot 1`] = `
           />
         </a>
       </li>
-      <li>
-        <a
-          aria-current="page"
-          href="/"
-          onClick={[Function]}
-        >
-          <i
-            className="fa fa-home my-float"
-          />
-        </a>
-      </li>
     </ul>
-    <div
-      className="label-container"
-    >
-      <div
-        className="label-text"
-      >
-         Navigate 
-      </div>
-      <i
-        className="fa fa-play label-arrow"
-      >
-         
-      </i>
-    </div>
   </div>
 </div>
 `;

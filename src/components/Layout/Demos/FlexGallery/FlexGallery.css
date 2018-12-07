@@ -1,0 +1,8 @@
+.Flex-container {
+  box-sizing: border-box;
+  background: #ffc600;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}

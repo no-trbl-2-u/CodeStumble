@@ -15,10 +15,10 @@ import Home from '../components/Layout/Home/Home';
 import Demos from '../components/Layout/Demos/Demos';
 
 // DEMOS
-import TimerPage from '../components/Layout/Demos/TimerPage/TimerPage';
 import DrumMachine from '../components/Layout/Demos/DrumMachine/DrumMachine';
-import Clock from '../components/Layout/Demos/Clock/Clock'
-import CSSVariables from '../components/Layout/Demos/CSSVariables/CSSVariables'
+import Clock from '../components/Layout/Demos/Clock/Clock';
+import CSSVariables from '../components/Layout/Demos/CSSVariables/CSSVariables';
+import FlexGallery from '../components/Layout/Demos/FlexGallery/FlexGallery';
 
 import articles from '../components/Layout/Article/md_articles/index';
 
@@ -67,10 +67,10 @@ class App extends Component {
             />
 
             <Demos path='/explore' />
-            <TimerPage path='/explore/timer' />
             <DrumMachine path='/explore/drummachine' />
             <Clock path='/explore/clock' />
             <CSSVariables path='/explore/cssvariables' />
+            <FlexGallery path='/explore/flexgallery' />
           </Router>
         </Layout> 
 

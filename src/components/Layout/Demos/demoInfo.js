@@ -1,12 +1,5 @@
 const demos = [
   {
-    demoName: 'Special Timer', 
-    path: 'timer',
-    img: 'https://picsum.photos/200/299/?random',
-    text: 'This is a simple timer project to demonstrate the various techniques in state management and display.',
-    codeLink: 'null'
-  },
-  {
     demoName: 'Drum Machine', 
     path: 'drummachine',
     img: 'https://cms-assets.tutsplus.com/uploads/users/158/posts/20616/image/drumKit0.jpg',
@@ -26,6 +19,13 @@ const demos = [
     img: 'https://picsum.photos/200/301/?random',
     text: "From Wes Bos's Javascript30, day03's project is CSS-Variables. This is a demonstration on how to manipulate CSS Variables with React's State architecture.",
     codeLink: 'https://github.com/no-trbl-2-u/MyReact30/tree/master/03-cssvariables'
+  },
+  {
+    demoName: 'Flex Gallery', 
+    path: 'flexgallery',
+    img: 'https://picsum.photos/200/302/?random',
+    text: "From Wes Bos's Javascript30, day 06's project revolves around the flex box, nesting the flex box, and basic transforms.",
+    codeLink: 'https://github.com/no-trbl-2-u/MyReact30/tree/master/05-flex-panel-gallery'
   },
 ]
 

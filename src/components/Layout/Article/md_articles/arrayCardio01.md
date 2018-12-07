@@ -38,7 +38,7 @@ const namedInventors = inventors
   .map(ea => ({first: ea.first, last: ea.last}))
 ```
 
-*Disclaimer: Since we're using anonymous **arrow** functions, we have to wrap our return statement in parenthesis (). If we don't it'll think our object innerds is the return statement*
+*Disclaimer: Since we're using anonymous **arrow** functions, we have to wrap our return statement in parenthesis (). If we don't it'll think our object innards is the return statement*
 
 ```js
 const mistake = data
@@ -47,7 +47,7 @@ const mistake = data
 
 *The interpreter will NOT like this code*
 
-## 3. Sort the inventors by birthdate, oldest to youngest
+## 3. Sort the inventors by birth date, oldest to youngest
 
 Array.prototype.sort() is another array method that takes a function and returns an array where that function was run on each element. The difference here is, the function itself determines HOW the returned array will be sorted. Here are a few examples:
 
@@ -232,7 +232,7 @@ const vehicleRecord = data
 
 I know what you're thinking..."But this isn't the solution, this just gives us a big object with all the tallies". Well, here is where we'll stop consulting the video and attempt to solve it from here ;).
 
-*Disclaimer: Turns out this WAS the solution he was going for, but let's keep going and sum their ages with some over-the-top & unnecasary data manipulation*
+*Disclaimer: Turns out this WAS the solution he was going for, but let's keep going and sum their ages with some over-the-top & unnecessary data manipulation*
 
 Let's get those numbers isolated somehow...
 
@@ -257,7 +257,7 @@ const vehicleTallies = arrayOfArrays
 
 ```
 
-Buuuuut, that doesn't work. Unfortunately for us, we've gotta do something with this data before we can use filter again. This is where **Flattening** comes in (I think).
+Buuuuut, that doesn't work. Unfortunately for us, we have to do something with this data before we can use filter again. This is where **Flattening** comes in (I think).
 
 *Disclaimer: You could **definitely** solve this whole thing in a much simpler way, but if you've made it this far, you'd probably appreciate the deep dive. Also, flatMap() is a thing and I'm pretty sure it'd fix this whole thing up.*
 

@@ -50,6 +50,14 @@ class About extends Component {
                   <span> LinkedIn</span>
               </a>
             </li>
+
+            {/* Left - Groove Catcher VR LeaderBoard */}
+            <li>
+              <a href="gc-leaderboard.netlify.com">
+                <i className="fa fa-angellist" aria-hidden="true"></i>
+                  <span> LeaderBoard</span>
+              </a>
+            </li>
           
           </ul>
 

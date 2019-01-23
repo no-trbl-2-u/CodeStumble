@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-has-alt */
 import React, { Component } from 'react';
 
 import DemoCard from './DemoCard/DemoCard';
@@ -31,7 +32,7 @@ class Demos extends Component {
               .map((ea, index) =>{
                 const {demoName, path, img, text, codeLink} = ea
                 return (
-                  <DemoCard 
+                  <DemoCard
                     key={index}
                     demoName={demoName}
                     path={path}

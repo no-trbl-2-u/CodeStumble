@@ -8,12 +8,12 @@ import './demoCard.css'
 const DemoCard = (props) => {
   const {demoName, path, image, text, codeLink} = props
   return (
-    <div className="col-md-4 col-sm-6 col-12">
+    <div className="col-md-3 col-sm-5 col-12">
       <div className="card mb-4 shadow-sm card-box">
         <img className="card-img-top" src={ image } alt="Card caption" />
 
         <div className="card-body">  
-          <h4 className="card-title">{demoName}</h4>
+          <h4 className="card-title">{ demoName }</h4>
           <p className="card-text">
             { text }
           </p>

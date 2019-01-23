@@ -19,7 +19,7 @@ class DrumMachine extends Component {
     return (
       <div className="DrumMachine">
         <DrumSet 
-          keyData= { keyData }
+          keyData={ keyData }
         />
       </div>
     );

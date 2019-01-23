@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AboutIMG from './AboutIMG/AboutIMG';
-import AboutSecret from './AboutSecret'
+import AboutSecret from './AboutSecret';
+import {Link} from '@reach/router';
 import './about.css';
 
 

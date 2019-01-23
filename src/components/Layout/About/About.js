@@ -53,8 +53,8 @@ class About extends Component {
 
             {/* Left - Groove Catcher VR LeaderBoard */}
             <li>
-              <a href="gc-leaderboard.netlify.com">
-                <i className="fa fa-angellist" aria-hidden="true"></i>
+              <a href="https://gc-leaderboard.netlify.com/">
+              <i className="fa fa-trophy" aria-hidden="true"></i>
                   <span> LeaderBoard</span>
               </a>
             </li>

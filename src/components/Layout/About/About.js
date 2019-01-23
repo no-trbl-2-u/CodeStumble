@@ -64,10 +64,10 @@ class About extends Component {
 
             {/* Right - SOMETHING */}
             <li>
-              <a href="https://codestumble.com/explore">
+              <Link to="/explore">
               <i className="fa fa-cogs" aria-hidden="true"></i>
                   <span> My Projects</span>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

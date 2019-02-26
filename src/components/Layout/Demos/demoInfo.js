@@ -1,5 +1,12 @@
 const demos = [
   {
+    demoName: "Conway's Game of Life", 
+    path: 'gameoflife',
+    img: 'https://picsum.photos/200/303/?random',
+    text: "Conway's Game of Life is an interesting attempt at simulating civilization. Using a hand full of rules, an infinite plane, and an arbitrary amount of time, Conway was able to simulate birth, death, and some weird patterns in the in-between.",
+    codeLink: 'https://github.com/no-trbl-2-u/gameOfLife-React-Hooks'
+  },
+  {
     demoName: 'Drum Machine', 
     path: 'drummachine',
     img: 'https://cms-assets.tutsplus.com/uploads/users/158/posts/20616/image/drumKit0.jpg',

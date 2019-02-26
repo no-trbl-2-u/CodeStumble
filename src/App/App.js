@@ -15,6 +15,7 @@ import Home from '../components/Layout/Home/Home';
 import Demos from '../components/Layout/Demos/Demos';
 
 // DEMOS
+import MainGame from '../components/Layout/Demos/GameOfLife/Main/Main'
 import DrumMachine from '../components/Layout/Demos/DrumMachine/DrumMachine';
 import Clock from '../components/Layout/Demos/Clock/Clock';
 import CSSVariables from '../components/Layout/Demos/CSSVariables/CSSVariables';
@@ -67,10 +68,11 @@ class App extends Component {
             />
 
             <Demos path='/explore' />
-            <DrumMachine path='/explore/drummachine' />
-            <Clock path='/explore/clock' />
-            <CSSVariables path='/explore/cssvariables' />
-            <FlexGallery path='/explore/flexgallery' />
+              <MainGame path='/explore/gameoflife' />
+              <DrumMachine path='/explore/drummachine' />
+              <Clock path='/explore/clock' />
+              <CSSVariables path='/explore/cssvariables' />
+              <FlexGallery path='/explore/flexgallery' />
           </Router>
         </Layout> 
 

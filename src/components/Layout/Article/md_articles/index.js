@@ -1,12 +1,12 @@
-import example01_md from './example01.md';
+// import example01_md from './example01.md';
 import intro_md from './intro.md';
 import arraycardio01_md from './arrayCardio01.md';
 
-const example01 = {
-  md: example01_md,
-  title: "This here is the first Example",
-  path: 'example01'
-}
+// const example01 = {
+//   md: example01_md,
+//   title: "This here is the first Example",
+//   path: 'example01'
+// }
 
 const intro = {
   md: intro_md,
@@ -21,7 +21,7 @@ const arraycardio01 = {
 }
 
 const articles = {
-  example01,
+  // example01,
   intro,
   arraycardio01
 }

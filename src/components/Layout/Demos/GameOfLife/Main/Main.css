@@ -90,7 +90,7 @@ button:focus {
   transform: translateY(2px);
 }
 
-.ButtonContainer h2 {
+.ButtonContainer-Header{
   width: 30%;
   margin: auto;
   margin-bottom: 8px;
@@ -99,4 +99,33 @@ button:focus {
   text-shadow: 2px 2px 4px rgb(224, 223, 223);
   /* border: 1px solid black; */
   /* border-radius: 25px; */
+}
+
+
+@media screen and (max-device-width: 550px) {
+  .ButtonContainer {
+    width: 100%;
+  }
+  
+  .ButtonContainer-Header{
+    width: 100%;
+    margin: 10px;
+    text-align:center;  
+  }
+  
+  .box {
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+  }
+  
+  .grid {
+    margin-top: 20px;
+    width: 90% !important;
+  }
+  
+  .Game-header {
+    font-size: 6vh;
+    width: 100%;
+  }
 }

@@ -12,7 +12,9 @@ function ButtonContainer ({
 }) {
   return (
     <div className="ButtonContainer">
-      <h2>Generations: { generation } </h2>
+      <h2
+        className="ButtonContainer-Header"
+      >Generations: { generation } </h2>
       <button onClick={ playButton }>Start</button>
       <button onClick={ stopButton }>Stop</button>
       <button onClick={ clearButton }>Clear</button>

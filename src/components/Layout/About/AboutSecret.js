@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutSecret = () => {
   return (
-    <React.Fragment>
+    <div className="Secret-Text">
       {/* 
           Here is a neat little secret!
             __ __
@@ -11,7 +11,7 @@ const AboutSecret = () => {
           | __|__ |
           <(__.__)>
       */}
-    </React.Fragment>
+    </div>
   );
 };
 

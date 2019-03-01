@@ -59,18 +59,20 @@ class Clock extends Component {
     const {seconds, minutes, hours} = this.state
     return (
       <div className="clock-container">
+
         <div className="clock">
           <div className="clock-face">
             <div className="hand hour-hand"></div>
             <div className="hand min-hand"></div>
             <div className="hand second-hand"></div>
           </div>
-          <div className="digital-time">
-              <span>{ (hours <= 9) ? `0${hours}` : hours } &nbsp; : </span>
-              <span>{ (minutes <= 9) ? `0${minutes}` : minutes } &nbsp; : </span>
-              <span>{(seconds <= 9) ? `0${seconds}` : `${seconds}`} </span>
-              <span>{(hours <= 12) ? 'AM' : 'PM'}</span>
-          </div>
+        </div>
+        
+        <div className="digital-time">
+          <span>{ hours <= 9 ? `0${hours}` : `${hours}` } &nbsp; : </span>
+          <span>{ minutes <= 9 ? `0${minutes}` : `${minutes}` } &nbsp; : </span>
+          <span>{ seconds <= 9 ? `0${seconds}` : `${seconds}`} </span>
+          <span>{ hours <= 12 ? 'AM' : 'PM'}</span>
         </div>
       </div>
     );

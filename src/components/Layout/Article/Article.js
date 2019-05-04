@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-has-alt */
 import React, { Component } from 'react';
 import Markdown from 'markdown-to-jsx';
 
@@ -20,13 +21,13 @@ class Article extends Component {
   }
 
   render () {
-    const {articles, articleId } = this.state;
+    const { articles, articleId } = this.state;
     return (
         <div className="mdArticle">
         {/* Markdown converts the MD file to readable HTML */}
           <Markdown>
             {/* Render an article based on the articleId from the "<Link to=...>" */}
-            {articles[articleId].md}
+            { articles[articleId].md }
           </Markdown>
         </div>
     )

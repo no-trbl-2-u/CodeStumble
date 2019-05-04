@@ -13,6 +13,10 @@ class ArticleIndex extends Component{
     }
   }
 
+  componentDidMount() {
+    console.log(this.props)
+  }
+
   render() {
     return (
       <div className="ArticleIndex-container">
@@ -24,11 +28,11 @@ class ArticleIndex extends Component{
         </section>
 
         <ul className='articleLinks'>
-          {this.state.articles.map((ea, index) => {
-            return(
+          {
+            this.state.articles.map((ea, index) =>
               <li className="articleLink" key={index}><Link to={ea.path}>{ea.title}</Link></li>
-            )  
-          })}
+            )
+          }
         </ul>
       </div>
     )

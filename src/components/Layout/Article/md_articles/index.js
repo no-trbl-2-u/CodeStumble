@@ -1,13 +1,8 @@
-// import example01_md from './example01.md';
-import intro_md from './intro.md';
-import arraycardio01_md from './arrayCardio01.md';
-import arraycardio02_md from './arrayCardio02.md';
-
-// const example01 = {
-//   md: example01_md,
-//   title: "This here is the first Example",
-//   path: 'example01'
-// }
+/* eslint-disable jsx-a11y/img-has-alt */
+import intro_md from './intro.md'
+import arraycardio01_md from './arrayCardio01.md'
+import arraycardio02_md from './arrayCardio02.md'
+import expressFCC_md from './expressFCC.md'
 
 const intro = {
   md: intro_md,
@@ -27,11 +22,17 @@ const arraycardio02 = {
   path: 'arraycardio02'
 }
 
+const expressFCC = {
+  md: expressFCC_md,
+  title: "Free Code Camp Node Express Follow-Along",
+  path: 'expressFCC'
+}
+
 const articles = {
-  // example01,
   intro,
   arraycardio01,
-  arraycardio02
+  arraycardio02,
+  expressFCC
 }
 
 export default articles;

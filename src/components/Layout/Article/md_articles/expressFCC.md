@@ -18,17 +18,18 @@ After you run these commands, you can open up ./server_START.js  and follow alon
 
 
 *Final Note: You will NOT be able to hand this in to "Complete" the task in FCC. You can only do that if you use their glitch.com repository, which is where some people are having problems. Oh well, we're here for the knowledge anyway, not for a tick in a box, right?* 😸
+
 ## Curriculum 🏫 💻
 * Meet the Node consoles 🤝
   * Log "Hello World" from the server
-  * server.js - line 23
-
+  * server_FINAL.js - line 23
 * Start a Working Express Server 🔰
-  * At the bottom of your code, use app.listen(PORT, HANDLER) to begin listening for other app.METHODs
-    * server.js - line 21
+  * At the bottom of your code, use app.listen(PO
+  RT, HANDLER) to begin listening for other app.METHODs
+    * server_FINAL.js - line 21
   * Create another route via app.get()
     * app.get() has the following format ```app.get(PATH: string, (req, res) => void)```
-      * server.js - line 16
+      * server_FINAL.js - line 16
   * set its path as the first argument to app.get()
   * send "Hello Express" via the app.send() method
 
@@ -39,7 +40,7 @@ After you run these commands, you can open up ./server_START.js  and follow alon
       * ```app.get(PATH, res.sendFile(path.join(__dirname + 'views/YOUR_FILE.html')))```
       * First, import a library called "path" that is inherit in node (no need for npm)
       * Then, use the inherit global variable __dirname to calculate the path passed to path.join()
-      * server.js - line 12
+      * server_FINAL.js - line 12
 
 * Serve Static Assets 🎁
   * Create a directory that will be served to the client, typically "public", "static", "client" etc...
@@ -63,13 +64,13 @@ After you run these commands, you can open up ./server_START.js  and follow alon
       * There mustn't be any spaces between the "=" in the assignment
   * Next, you'll need a package called **dotenv**
     * In your terminal, ```npm i dotenv --save```
-  * Then, as early as possible in your server.js...
+  * Then, as early as possible in your server_FINAL.js...
     * ```require('dotenv').config()``` - This will import your environment variables and place them in node's process.env object for you to be able to access your environment variables.
     * In our case, I like my requires to be together, so I split the function call.
-      * server.js - line 1 (Imported the dotenv module)
-      * server.js - line 7 (Called the _.config() method to place variables inside process.env)
+      * server_FINAL.js - line 1 (Imported the dotenv module)
+      * server_FINAL.js - line 7 (Called the _.config() method to place variables inside process.env)
   * Lastly, in order to use the variables, you can reference them off of the process.env object literal
-    * ```process.env.PORT ``` server.js - line 32, 33
+    * ```process.env.PORT ``` server_FINAL.js - line 32, 33
 
 * Implement a Root-Level Request Logger Middleware 🌳
   * A Middleware function is in the following format:
@@ -100,7 +101,7 @@ After you run these commands, you can open up ./server_START.js  and follow alon
     * ```customMiddleware.js``` - line 18
   * Then call ```next()``` to make sure the middleware function continues on
   * Lastly, create your route using ```app.get(...)``` and use ```res.send(req.customProperty)```
-    * ```server.js``` - line 56
+    * ```server_FINAL.js``` - line 56
 
 * Get Route Parameter Input from the Client 🚸
   * In order to accomplish this task, we'll need to use ```req.params``` which will provide us any queries passed via the url
@@ -108,7 +109,7 @@ After you run these commands, you can open up ./server_START.js  and follow alon
   * We'll also need to use a **dynamic url** in our express server
     * For example, ```app.get(':/word', (...) => {...})```
     * Now any URL passed, that isn't already accounted for, will be directed to this particular route
-  * Server.js - line 58 (dynamic URL) + 59 (req.params)
+  * Server_FINAL.js - line 58 (dynamic URL) + 59 (req.params)
 
 
 * Get Query Parameter Input from the Client 🚸
@@ -119,14 +120,14 @@ After you run these commands, you can open up ./server_START.js  and follow alon
     * ```req.query``` will give you your entire query object
     * ```req.query[key]``` or ```req.query.key``` will get you the direct value
       * Note: It is important to create logic flow here to direct the User with feedback
-      * server.js - line 66 (logic flow)
-    * server.js  - line 67 (sending direct values)
+      * server_FINAL.js - line 66 (logic flow)
+    * server_FINAL.js  - line 67 (sending direct values)
 
 * Use body-parser to Parse POST Requests 📮🏣
   * Mounting the body-parser is as easy as:
     * ```js const bodyParser = require('body-parser')```
     * Or in my case:
-      * server.js - line 6 (const parse = ...)
+      * server_FINAL.js - line 6 (const parse = ...)
 
 * Get Data from POST Requests 📮🏣
   * Now in order to demonstrate this, I had to make the simplest form possible to get to the point:
@@ -146,10 +147,10 @@ After you run these commands, you can open up ./server_START.js  and follow alon
     * We'll have to use the ```app.all(PATH).get(GET_HANDLER).post(POST_HANDLER)```
       * The **GET** method is used when they visit the ```/form``` page
         * **GET** responds with an html page
-        * server.js - line 75
+        * server_FINAL.js - line 75
       * The **POST** method is used when they submit the form
         ** **POST** responds with raw html containing the input from the user
-        * server.js - line 77
+        * server_FINAL.js - line 77
 ## Notes
 * Routes take the following structure:
   * app.METHOD(PATH: string, HANDLER: (req, res): void)
@@ -173,15 +174,15 @@ After you run these commands, you can open up ./server_START.js  and follow alon
   * In our case, we'll leave it as is for educational purposes. It is important however to keep prevent this file from being posted online, ie. Github, Gitlab, etc...
 
 * Using the ```dotenv``` npm package is a typical best practice to separate the app configuration from the app code.
-  * An alternative to this methodology, is to create a ```.env.js``` file, place your environment variables in a single object literal, export that single object, and then import and reference that object in your server.js
+  * An alternative to this methodology, is to create a ```.env.js``` file, place your environment variables in a single object literal, export that single object, and then import and reference that object in your server_FINAL.js
   * The downside to this, is in your deployment stage, when you have environment variables stored in **production**, they'll end up being separate from your variables stored in **development**. (ie. ```config.PORT``` vs ```process.env.PORT```)
 
 * Morgan is an express middleware function used to create log files or the incoming HTTP requests.
   * By creating a ```writeStream``` using the internal ```fs``` library, we're able to take the HTTP requests and create an access.log file
 
-* In an effort to keep our ```server.js``` file a little neater, I decided to keep our middleware definitions in a separate file.
+* In an effort to keep our ```server_FINAL.js``` file a little neater, I decided to keep our middleware definitions in a separate file.
   * We'll be defining our Middleware functions in ```customMiddleware.js```
-  * Import: server.js - line 7
+  * Import: server_FINAL.js - line 7
 
 * When **Chaining** middleware functions, to be able to share any results, just attach a ```{key: value}``` pair to your ```req``` object. When you call ```next()```, the next middleware function will have access to that data.
   * Here is an example:

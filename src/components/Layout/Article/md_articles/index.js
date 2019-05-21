@@ -29,11 +29,12 @@ const expressFCC = {
   path: 'expressFCC'
 }
 
+
+// Entire Collection
 const articles = {
   intro,
   arraycardio01,
   arraycardio02,
   expressFCC
 }
-
 export default articles;

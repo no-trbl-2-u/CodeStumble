@@ -3,7 +3,15 @@
   height: 100%;
   margin:0px;
   padding:0px;
+  font-family: "Bookman Old Style";
+}
+
+.hljs{
   font-family: 'Fira Code';
+  width: fit-content;
+  
+  /* consider inline || block*/
+  display: inline-table;
 }
 
 /*                        Media Queries                            */

@@ -64,51 +64,40 @@ After you run these commands, you can open up ./server_START.js  and follow alon
       * There mustn't be any spaces between the "=" in the assignment
   * Next, you'll need a package called **dotenv**
     * In your terminal, ```npm i dotenv --save```
-  * Then, as early as possible in your server_FINAL.js...
+  * Then, as early as possible in your server.js...
     * ```require('dotenv').config()``` - This will import your environment variables and place them in node's process.env object for you to be able to access your environment variables.
     * In our case, I like my requires to be together, so I split the function call.
       * server_FINAL.js - line 1 (Imported the dotenv module)
       * server_FINAL.js - line 7 (Called the _.config() method to place variables inside process.env)
   * Lastly, in order to use the variables, you can reference them off of the process.env object literal
-    * ```process.env.PORT ``` server_FINAL.js - line 32, 33
+    * ```process.env.PORT ``` located in server_FINAL.js - line 32, 33
 
 * Implement a Root-Level Request Logger Middleware 🌳
   * A Middleware function is in the following format:
-    * ```js 
-      function middleWareFunction(request, response, next){
-        doSomething()
-        next()
-      }
-      ```
+    * ```function middleWareFunction (request, response, next){doSomething(); next()}```
   * To use your middleware function with every route, place an ```app.use(middleWareFunction)``` before all your routes
   * Now, we'll use this format and take advantage of:
-    ```req.method```, ```req.path```, and ```req.ip```, all of which are metadata surrounding our HTTP traffic
-  * Lastly, 
+    req.method, req.path, and req.ip, all of which are metadata surrounding our HTTP traffic
 
 * Chain Middleware to Create a Time Server ⛓
   * Middleware can be mounted to a **SPECIFIC** route by using the following format:
     * ```app.METHOD(path, middlewareFunction)```
     * You can also chain multiple middleware functions like so:
-      * ```js
-        app.get('/yourPath',
-          mWareFN1, // Must set data to req.CUSTOM_KEY then call next()
-          (req, res) => res.send(req.CUSTOM_KEY)
-        )
-        ```
-  * To create our ```getTime``` middleware function, all we have to do is instantiate a new date object:
-    * ```customMiddleware.js``` - line 17
+      * ```app.get('/yourPath', mWareFN1, (req, res) => res.send(req.CUSTOM_KEY))```
+  * To create our **getTime** middleware function, all we have to do is instantiate a new date object:
+    * customMiddleware.js - line 17
   * Next, attach that new date object to the request object that's passed to the middleware function and route
-    * ```customMiddleware.js``` - line 18
-  * Then call ```next()``` to make sure the middleware function continues on
-  * Lastly, create your route using ```app.get(...)``` and use ```res.send(req.customProperty)```
-    * ```server_FINAL.js``` - line 56
+    * customMiddleware.js - line 18
+  * Then call next() to make sure the middleware function continues on
+  * Lastly, create your route using app.get(...) and use ```res.send(req.CUSTOM_KEY)```
+    * server_FINAL.js - line 56
 
 * Get Route Parameter Input from the Client 🚸
   * In order to accomplish this task, we'll need to use ```req.params``` which will provide us any queries passed via the url
     * ```req.params``` returns undefined, unless there is a dynamic URL
   * We'll also need to use a **dynamic url** in our express server
     * For example, ```app.get(':/word', (...) => {...})```
-    * Now any URL passed, that isn't already accounted for, will be directed to this particular route
+    * Now any URL passed, that isn't already accounted for, will be directed to this particular route within the key req.params.word
   * Server_FINAL.js - line 58 (dynamic URL) + 59 (req.params)
 
 
@@ -119,13 +108,13 @@ After you run these commands, you can open up ./server_START.js  and follow alon
   * In order to access the query in your code:
     * ```req.query``` will give you your entire query object
     * ```req.query[key]``` or ```req.query.key``` will get you the direct value
-      * Note: It is important to create logic flow here to direct the User with feedback
+      * *Note: It is important to create logic flow here to direct the User to use the proper query variables*
       * server_FINAL.js - line 66 (logic flow)
     * server_FINAL.js  - line 67 (sending direct values)
 
 * Use body-parser to Parse POST Requests 📮🏣
   * Mounting the body-parser is as easy as:
-    * ```js const bodyParser = require('body-parser')```
+    * ```require('body-parser')```
     * Or in my case:
       * server_FINAL.js - line 6 (const parse = ...)
 
@@ -133,13 +122,13 @@ After you run these commands, you can open up ./server_START.js  and follow alon
   * Now in order to demonstrate this, I had to make the simplest form possible to get to the point:
     * views/form.html - lines 10 - 18
     * Your form tag just needs to be fed the method to be used when the form is submitted and most importantly, the route that will receive the information.
-      * ```html
+      * ```
         <form action="/form" method="POST">
           <...>
         </form>
         ```
     * By creating a simple "sumbit" input, whatever is in the ```<form>...</form>``` will get sent to our server at the path designated in the form tag.
-      * ```html
+      * ```
         <input type="submit" value="submit" >
         ```
 
@@ -180,7 +169,7 @@ After you run these commands, you can open up ./server_START.js  and follow alon
 * Morgan is an express middleware function used to create log files or the incoming HTTP requests.
   * By creating a ```writeStream``` using the internal ```fs``` library, we're able to take the HTTP requests and create an access.log file
 
-* In an effort to keep our ```server_FINAL.js``` file a little neater, I decided to keep our middleware definitions in a separate file.
+* In an effort to keep our server_FINAL.js file a little neater, I decided to keep our middleware definitions in a separate file.
   * We'll be defining our Middleware functions in ```customMiddleware.js```
   * Import: server_FINAL.js - line 7
 

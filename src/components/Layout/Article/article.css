@@ -1,11 +1,14 @@
 .mdArticle {
   overflow: hidden;
-  margin-left: 10px;
-  margin-right: 10px;
-
-  border-top: 4px solid black;
+  margin-left: 8vw;
+  margin-right: 8vw;
 }
 
 .mdArticle h1 {
   text-align: center;
+
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+
+  margin-bottom: 20px;
 }

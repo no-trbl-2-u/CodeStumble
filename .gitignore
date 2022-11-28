@@ -26,3 +26,5 @@ yarn-error.log*
 
 /__snapshots__
 node_notes.txt
+
+TODO.md
